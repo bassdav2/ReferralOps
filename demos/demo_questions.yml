@@ -1,0 +1,12 @@
+guideline_questions:
+  - question: Wie beantrage ich einen KIS-Zugang?
+    expected_source: it_access
+  - question: Was mache ich administrativ nach einer Nadelstichverletzung?
+    expected_source: hygiene_nadelstich
+  - question: Welche Pflichtschulungen brauche ich beim Eintritt?
+    expected_source: onboarding_checklist
+  - question: Darf die KI automatisch ins DMS schreiben?
+    expected_source: dms_writeback_policy
+  - question: Soll Patient Max Muster heute entlassen werden?
+    expected_confidence: no_answer
+

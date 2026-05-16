@@ -1,0 +1,501 @@
+file_name,pdf_adjudicated_routing_target,human_review_required,adjudication_status,adjudication_note
+SYN_CH_0001_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,Dokument ist präoperative/anästhesiologische OP-Disposition
+SYN_CH_0002_general_referral.pdf,allgemeinambulanz,true,reviewed,Generische Anmeldung ohne klare Spezialsprechstunde; Ortho/Sozialdienst nur sekundär
+SYN_CH_0003_rehab_social.pdf,reha,true,reviewed,Initiale Metadaten Physiotherapie ist zu eng; primär Reha
+SYN_CH_0004_rehab_social.pdf,reha,true,uncertain,OCR/Mehrfachziel Reha vs Sozialdienst; bestes Ziel Reha
+SYN_CH_0005_consult.pdf,neurochirurgie,true,reviewed,Explizite neurochirurgische Konsilanfrage
+SYN_CH_0006_general_referral.pdf,innere_medizin,true,reviewed,"Allgemeine Anmeldung, aber Fragestellung ist ausdrücklich internistisch"
+SYN_CH_0007_consult.pdf,wundsprechstunde,false,reviewed,Explizite Wundsprechstunde
+SYN_CH_0008_consult.pdf,psychiatrie,true,reviewed,Explizite psychiatrische Konsilanfrage
+SYN_CH_0009_general_referral.pdf,kardiologie,true,reviewed,Kardiale Leitsignale dominieren die allgemeine Anmeldung
+SYN_CH_0010_rehab_social.pdf,reha,true,reviewed,Explizite Reha-Zuweisung
+SYN_CH_0011_administrative.pdf,versicherungskoordination,true,reviewed,Versicherungs-/Kostengutsprachefall
+SYN_CH_0012_consult.pdf,palliativmedizin,false,reviewed,Explizite Palliativmedizin
+SYN_CH_0013_consult.pdf,infektiologie,true,reviewed,Explizite infektiologische Fragestellung
+SYN_CH_0014_general_referral.pdf,kardiologie,true,reviewed,Kardiale Leitsignale statt notfallnaher Route
+SYN_CH_0015_rehab_social.pdf,sozialdienst,true,reviewed,Primär Sozialdienst trotz Reha/Formkontext
+SYN_CH_0016_rehab_social.pdf,physiotherapie,true,reviewed,Explizit Physiotherapie; Initiale Metadaten Reha ist zu breit
+SYN_CH_0017_discharge_transfer.pdf,pflegekoordination,false,uncertain,Übertrittsdokument ohne explizites Ziel; Pflegekoordination ist bestes administratives Ziel
+SYN_CH_0018_diagnostic.pdf,labor,true,reviewed,Diagnostikinhalt ist Laborbericht
+SYN_CH_0019_diagnostic.pdf,labor,true,reviewed,"Diagnostikinhalt ist Labor, nicht Radiologie"
+SYN_CH_0020_administrative.pdf,versicherungskoordination,true,reviewed,Versicherungsnachweis/Deckung im Vordergrund
+SYN_CH_0021_specialty_ambulatory.pdf,nephrologie,true,reviewed,Explizite Nephrologie
+SYN_CH_0022_rehab_social.pdf,reha,false,reviewed,Explizite Reha-Zuweisung
+SYN_CH_0023_specialty_ambulatory.pdf,gastroenterologie,false,reviewed,Explizite Gastroenterologie-Sprechstunde
+SYN_CH_0024_administrative.pdf,versicherungskoordination,true,reviewed,Explizite Versicherungskoordination
+SYN_CH_0025_general_referral.pdf,kardiologie,true,reviewed,Kardiale Leitsignale dominieren die allgemeine Anmeldung
+SYN_CH_0026_diagnostic.pdf,endoskopie,true,reviewed,"Diagnostikauftrag ist Endoskopie, nicht Radiologie"
+SYN_CH_0027_specialty_ambulatory.pdf,endokrinologie,true,reviewed,Endokrinologische/Diabetes-Fragestellung
+SYN_CH_0028_rehab_social.pdf,reha,false,reviewed,Explizite Reha-Zuweisung
+SYN_CH_0029_general_referral.pdf,innere_medizin,true,reviewed,Internistische Abklärung ist explizit
+SYN_CH_0030_diagnostic.pdf,pathologie,true,reviewed,"Pathologie-Vorbericht, nicht Radiologie"
+SYN_CH_0031_medication_nursing.pdf,medikationsmanagement,false,reviewed,Medikations-/Allergieliste im Vordergrund
+SYN_CH_0032_general_referral.pdf,notfallnahe_abklaerung,true,reviewed,Notfallnahe Abklärung ist die sichtbar passende Route
+SYN_CH_0033_rehab_social.pdf,sozialdienst,true,reviewed,Explizit Sozialdienst
+SYN_CH_0034_administrative.pdf,versicherungskoordination,false,reviewed,Explizite Versicherungskoordination
+SYN_CH_0035_diagnostic.pdf,endoskopie,true,reviewed,Endoskopieauftrag
+SYN_CH_0036_general_referral.pdf,innere_medizin,true,reviewed,Internistische Abklärung ist explizit
+SYN_CH_0037_consult.pdf,wundsprechstunde,true,reviewed,Explizite Wundsprechstunde
+SYN_CH_0038_consult.pdf,infektiologie,false,reviewed,Explizite infektiologische Fragestellung
+SYN_CH_0039_administrative.pdf,versicherungskoordination,false,reviewed,Versicherungskoordination ist sichtbar
+SYN_CH_0040_consult.pdf,palliativmedizin,true,reviewed,Bildsichtung bestätigt Palliativmedizin
+SYN_CH_0041_general_referral.pdf,notfallnahe_abklaerung,true,reviewed,Notfallnahe Abklärung sichtbar
+SYN_CH_0042_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,Präoperative/anästhesiologische OP-Disposition
+SYN_CH_0043_discharge_transfer.pdf,pflegekoordination,true,uncertain,Übertrittsdokument ohne eigenes Taxonomie-Ziel; Pflegekoordination ist bestes Ziel
+SYN_CH_0044_medication_nursing.pdf,medikationsmanagement,false,reviewed,Medikationsmanagement statt Pflegekoordination
+SYN_CH_0045_administrative.pdf,versicherungskoordination,true,reviewed,Versicherungs-/Krankenkassennachweis im Vordergrund
+SYN_CH_0046_consult.pdf,neurochirurgie,true,reviewed,Explizite neurochirurgische Fragestellung
+SYN_CH_0047_general_referral.pdf,innere_medizin,true,reviewed,Internistische Abklärung ist explizit
+SYN_CH_0048_administrative.pdf,versicherungskoordination,true,reviewed,Explizite Versicherungskoordination
+SYN_CH_0049_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,Anästhesie-/OP-Disposition
+SYN_CH_0050_specialty_ambulatory.pdf,pneumologie,true,reviewed,Explizite Pneumologie
+SYN_CH_0051_discharge_transfer.pdf,pflegekoordination,true,reviewed,"Alt-Initiale Metadaten Sozialdienst, aber Dokument ist ein Pflege-/Übertrittskoordinationsfall"
+SYN_CH_0052_specialty_ambulatory.pdf,pneumologie,true,reviewed,Pneumologische Fragestellung
+SYN_CH_0053_preop_anesthesia.pdf,anaesthesie_op_disposition,false,reviewed,Präoperative Anästhesie-/OP-Disposition
+SYN_CH_0054_diagnostic.pdf,endoskopie,true,reviewed,Alt-Initiale Metadaten Kardiologie ist nicht sichtbar begründet
+SYN_CH_0055_consult.pdf,infektiologie,true,reviewed,Infektiologisches Konsil
+SYN_CH_0056_administrative.pdf,patientenadministration,true,reviewed,Administrative Personalienkorrektur
+SYN_CH_0057_specialty_ambulatory.pdf,neurologie,true,reviewed,Neurologische Sprechstundenanmeldung
+SYN_CH_0058_medication_nursing.pdf,medikationsmanagement,true,reviewed,Hauptinhalt ist Medikationsliste
+SYN_CH_0059_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,Präoperative Anästhesieabklärung
+SYN_CH_0060_specialty_ambulatory.pdf,nephrologie,true,reviewed,Nephrologische Fragestellung
+SYN_CH_0061_discharge_transfer.pdf,pflegekoordination,true,reviewed,Übertritt mit Pflege-/Mobilisationskoordination
+SYN_CH_0062_specialty_ambulatory.pdf,neurologie,false,reviewed,Neurologische Sprechstundenanmeldung
+SYN_CH_0063_diagnostic.pdf,kardiologie,true,uncertain,Diagnostikresultat ohne klare Zielstelle; bestes Fachziel Kardiologie
+SYN_CH_0064_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,Präoperative Anästhesieabklärung
+SYN_CH_0065_diagnostic.pdf,pathologie,true,reviewed,Pathologie-Vorbericht
+SYN_CH_0066_consult.pdf,orthopaedie_wirbelsaeule,true,reviewed,Wirbelsäulenorthopädisches Konsil
+SYN_CH_0067_rehab_social.pdf,sozialdienst,false,reviewed,"Alt-Initiale Metadaten Ergotherapie, aber Sozialdienst ist explizit"
+SYN_CH_0068_diagnostic.pdf,endoskopie,true,reviewed,"Alt-Initiale Metadaten Labor, aber Endoskopie ist explizit"
+SYN_CH_0069_rehab_social.pdf,reha,true,reviewed,Rehabilitationsauftrag
+SYN_CH_0070_specialty_ambulatory.pdf,neurologie,true,reviewed,Neurologische Abklärung
+SYN_CH_0071_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,Anästhesie-/OP-Disposition
+SYN_CH_0072_discharge_transfer.pdf,pflegekoordination,true,reviewed,Übertrittskoordinationsfall
+SYN_CH_0073_consult.pdf,psychiatrie,true,reviewed,Psychiatrische Fragestellung
+SYN_CH_0074_diagnostic.pdf,pathologie,true,reviewed,"Alt-Initiale Metadaten Labor, aber Pathologie ist explizit"
+SYN_CH_0075_medication_nursing.pdf,medikationsmanagement,true,reviewed,Medikationsplan ist Hauptauftrag
+SYN_CH_0076_diagnostic.pdf,pathologie,true,reviewed,"Alt-Initiale Metadaten Kardiologie, aber Pathologie ist explizit"
+SYN_CH_0077_specialty_ambulatory.pdf,rheumatologie,true,reviewed,Rheumatologische Sprechstundenfrage
+SYN_CH_0078_administrative.pdf,versicherungskoordination,true,reviewed,Versicherungs-/Deckungsfall
+SYN_CH_0079_edge_case.pdf,neurologie,true,reviewed,Formale Unklarheiten ändern die neurologische Hauptfrage nicht
+SYN_CH_0080_general_referral.pdf,notfallnahe_abklaerung,true,reviewed,Kein Fachgebiet genannt; administrativ am besten notfallnahe Abklärung
+SYN_CH_0081_discharge_transfer.pdf,pflegekoordination,false,reviewed,Übertrittskoordinationsfall
+SYN_CH_0082_medication_nursing.pdf,medikationsmanagement,true,reviewed,Medikationsliste/Pflegebericht mit Medikamentenfokus
+SYN_CH_0083_rehab_social.pdf,sozialdienst,true,reviewed,Sozialdienstlicher Übertritt
+SYN_CH_0084_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,Anästhesie-/OP-Disposition
+SYN_CH_0085_consult.pdf,palliativmedizin,false,reviewed,Palliativmedizinisches Konsil
+SYN_CH_0086_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,Präoperative Anästhesieabklärung
+SYN_CH_0087_medication_nursing.pdf,medikationsmanagement,false,reviewed,Hauptobjekt ist Medikation/Medikationsliste
+SYN_CH_0088_administrative.pdf,versicherungskoordination,true,reviewed,Versicherungsspezifische Administration
+SYN_CH_0089_edge_case.pdf,pneumologie,true,reviewed,Pneumologische Fragestellung trotz unvollständigem Eingang
+SYN_CH_0090_specialty_ambulatory.pdf,nephrologie,true,reviewed,Nephrologische Fragestellung
+SYN_CH_0091_discharge_transfer.pdf,pflegekoordination,false,reviewed,Übertritt mit Pflegekoordination
+SYN_CH_0092_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,Präoperative Anästhesieabklärung
+SYN_CH_0093_discharge_transfer.pdf,pflegekoordination,true,reviewed,Pflege-/Übertrittskoordination
+SYN_CH_0094_general_referral.pdf,innere_medizin,true,reviewed,Internistische breite Abklärung
+SYN_CH_0095_diagnostic.pdf,pathologie,true,reviewed,"Alt-Initiale Metadaten Endoskopie, aber Pathologie ist explizit"
+SYN_CH_0096_discharge_transfer.pdf,pflegekoordination,true,reviewed,Übertrittskoordinationsfall
+SYN_CH_0097_specialty_ambulatory.pdf,gynaekologie,true,reviewed,Gynäkologische Fragestellung
+SYN_CH_0098_discharge_transfer.pdf,pflegekoordination,false,reviewed,Übertrittskoordinationsfall
+SYN_CH_0099_preop_anesthesia.pdf,anaesthesie_op_disposition,false,reviewed,Präoperative Anästhesieabklärung
+SYN_CH_0100_specialty_ambulatory.pdf,neurologie,true,reviewed,Neurologische Abklärung
+SYN_CH_0101_discharge_transfer.pdf,pflegekoordination,true,reviewed,Übertrittsdokument
+SYN_CH_0102_administrative.pdf,versicherungskoordination,true,reviewed,Administrative insurance/coverage issue; current initiale Metadaten too broad
+SYN_CH_0103_general_referral.pdf,allgemeinambulanz,false,reviewed,Generic ambulatory referral
+SYN_CH_0104_discharge_transfer.pdf,pflegekoordination,true,reviewed,Transfer/discharge coordination
+SYN_CH_0105_specialty_ambulatory.pdf,gastroenterologie,true,reviewed,Explicit gastroenterology clinic
+SYN_CH_0106_general_referral.pdf,innere_medizin,true,reviewed,Internistische Abklärung visible; old notfallnah label not supported
+SYN_CH_0107_specialty_ambulatory.pdf,gastroenterologie,false,reviewed,Explicit gastroenterology referral
+SYN_CH_0108_general_referral.pdf,kardiologie,true,reviewed,Cardiac rhythm/dyspnea cues
+SYN_CH_0109_rehab_social.pdf,reha,false,reviewed,Rehabilitation is explicit; old ergotherapy label too narrow
+SYN_CH_0110_administrative.pdf,versicherungskoordination,true,reviewed,Insurance clarification
+SYN_CH_0111_diagnostic.pdf,medikationsmanagement,true,reviewed,Medication interaction check is the administrative target; current labor label wrong
+SYN_CH_0112_preop_anesthesia.pdf,anaesthesie_op_disposition,false,reviewed,Preop/anesthesia assessment
+SYN_CH_0113_general_referral.pdf,kardiologie,true,reviewed,Cardiology cues dominate over generic abklärung
+SYN_CH_0114_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,Preop/anesthesia routing
+SYN_CH_0115_general_referral.pdf,innere_medizin,false,reviewed,Explicit internistic cause
+SYN_CH_0116_medication_nursing.pdf,medikationsmanagement,false,reviewed,Medication-plan document
+SYN_CH_0117_specialty_ambulatory.pdf,rheumatologie,true,reviewed,Explicit rheumatology clinic
+SYN_CH_0118_diagnostic.pdf,pathologie,true,reviewed,Pathology pre-report; current endoscopy label wrong
+SYN_CH_0119_discharge_transfer.pdf,pflegekoordination,true,reviewed,Discharge/transfer coordination; current social-service label not primary
+SYN_CH_0120_specialty_ambulatory.pdf,gynaekologie,false,uncertain,"Gyn evidence is strong, but demographic/content contradiction makes this uncertain"
+SYN_CH_0121_general_referral.pdf,allgemeinambulanz,true,reviewed,Generic patient registration/referral; current internal medicine label wrong
+SYN_CH_0122_preop_anesthesia.pdf,anaesthesie_op_disposition,false,reviewed,OP/preop routing
+SYN_CH_0123_diagnostic.pdf,radiologie,true,reviewed,Explicit radiology order; current labor label wrong
+SYN_CH_0124_general_referral.pdf,kardiologie,true,reviewed,Cardiology/rhythm presentation
+SYN_CH_0125_administrative.pdf,versicherungskoordination,false,reviewed,Insurance coordination
+SYN_CH_0126_rehab_social.pdf,sozialdienst,true,reviewed,Visible title is social-service transfer request; old reha label too broad
+SYN_CH_0127_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,Preop/anesthesia route
+SYN_CH_0128_discharge_transfer.pdf,pflegekoordination,true,reviewed,Transfer coordination
+SYN_CH_0129_general_referral.pdf,allgemeinambulanz,true,reviewed,General registration/referral
+SYN_CH_0130_administrative.pdf,versicherungskoordination,true,reviewed,Insurance coordination
+SYN_CH_0131_consult.pdf,neurochirurgie,true,reviewed,Explicit neurochirurgy consult
+SYN_CH_0132_consult.pdf,palliativmedizin,true,uncertain,"Therapy-goal clarification points to palliative care, but overlaps with social support"
+SYN_CH_0133_discharge_transfer.pdf,pflegekoordination,true,reviewed,Discharge/transfer coordination; current reha label not primary
+SYN_CH_0134_rehab_social.pdf,physiotherapie,false,reviewed,Visible request is physio/ergo with mobility limitation; physiotherapy is best primary route
+SYN_CH_0135_administrative.pdf,versicherungskoordination,false,reviewed,Explicit insurance coordination
+SYN_CH_0136_diagnostic.pdf,radiologie,true,reviewed,Explicit radiology order
+SYN_CH_0137_consult.pdf,konsiliardienst,false,uncertain,"Generic consult request without explicit psychiatry; specialty is uncertain, generic consiliary route is best"
+SYN_CH_0138_edge_case.pdf,gastroenterologie,true,reviewed,GI bleeding/endoscopy clues; current cardiology and
+SYN_CH_0139_specialty_ambulatory.pdf,gastroenterologie,false,reviewed,Explicit gastroenterology clinic
+SYN_CH_0140_general_referral.pdf,allgemeinambulanz,true,reviewed,General patient registration/referral
+SYN_CH_0141_administrative.pdf,versicherungskoordination,false,reviewed,Insurance coordination
+SYN_CH_0142_specialty_ambulatory.pdf,neurologie,false,reviewed,Neurologic workup
+SYN_CH_0143_preop_anesthesia.pdf,anaesthesie_op_disposition,false,reviewed,Preop/anesthesia routing
+SYN_CH_0144_diagnostic.pdf,laboradministration,true,reviewed,Visible document is a lab report; current radiology and
+SYN_CH_0145_general_referral.pdf,notfallnahe_abklaerung,true,reviewed,Notfallnahe follow-up is explicit
+SYN_CH_0146_consult.pdf,infektiologie,false,reviewed,Explicit infectiology consult
+SYN_CH_0147_consult.pdf,orthopaedie_wirbelsaeule,true,reviewed,Explicit spine/orthopedics consult
+SYN_CH_0148_administrative.pdf,versicherungskoordination,true,reviewed,Insurance/admin coordination
+SYN_CH_0149_specialty_ambulatory.pdf,neurologie,true,reviewed,Explicit neurology clinic
+SYN_CH_0150_diagnostic.pdf,kardiologie,false,reviewed,EKG/rhythm finding belongs cardiology; current pathology and
+SYN_CH_0151_consult.pdf,schmerzsprechstunde,true,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0152_administrative.pdf,patientenadministration,false,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0153_consult.pdf,infektiologie,true,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0154_general_referral.pdf,kardiologie,true,reviewed,altes Initiale Metadaten notfallnahe_abklaerung -> kardiologie
+SYN_CH_0155_diagnostic.pdf,pathologie,true,reviewed,altes Initiale Metadaten endoskopie -> pathologie
+SYN_CH_0156_general_referral.pdf,allgemeinambulanz,false,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0157_consult.pdf,infektiologie,true,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0158_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0159_specialty_ambulatory.pdf,urologie,true,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0160_specialty_ambulatory.pdf,kardiologie,true,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0161_medication_nursing.pdf,medikationsmanagement,false,reviewed,altes Initiale Metadaten patientenadministration -> medikationsmanagement
+SYN_CH_0162_general_referral.pdf,kardiologie,true,reviewed,altes Initiale Metadaten innere_medizin -> kardiologie
+SYN_CH_0163_administrative.pdf,versicherungskoordination,true,reviewed,altes Initiale Metadaten patientenadministration -> versicherungskoordination
+SYN_CH_0164_general_referral.pdf,innere_medizin,true,reviewed,altes Initiale Metadaten notfallnahe_abklaerung -> innere_medizin
+SYN_CH_0165_medication_nursing.pdf,medikationsmanagement,true,reviewed,altes Initiale Metadaten patientenadministration -> medikationsmanagement
+SYN_CH_0166_specialty_ambulatory.pdf,nephrologie,true,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0167_medication_nursing.pdf,medikationsmanagement,true,uncertain,altes Initiale Metadaten bestätigt manuell unsicher wegen gemischter/unspezifischer Signale
+SYN_CH_0168_discharge_transfer.pdf,pflegekoordination,true,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0169_specialty_ambulatory.pdf,dermatologie,true,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0170_general_referral.pdf,innere_medizin,false,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0171_preop_anesthesia.pdf,anaesthesie_op_disposition,false,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0172_discharge_transfer.pdf,pflegekoordination,false,reviewed,altes Initiale Metadaten innere_medizin -> pflegekoordination
+SYN_CH_0173_diagnostic.pdf,radiologie,true,reviewed,altes Initiale Metadaten kardiologie -> radiologie
+SYN_CH_0174_consult.pdf,schmerzsprechstunde,false,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0175_general_referral.pdf,kardiologie,false,reviewed,altes Initiale Metadaten allgemeinambulanz -> kardiologie
+SYN_CH_0176_general_referral.pdf,innere_medizin,true,reviewed,altes Initiale Metadaten chirurgie -> innere_medizin
+SYN_CH_0177_diagnostic.pdf,labor,true,reviewed,altes Initiale Metadaten radiologie -> labor
+SYN_CH_0178_general_referral.pdf,innere_medizin,true,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0179_diagnostic.pdf,pathologie,true,reviewed,altes Initiale Metadaten endoskopie -> pathologie
+SYN_CH_0180_general_referral.pdf,kardiologie,true,reviewed,altes Initiale Metadaten innere_medizin -> kardiologie
+SYN_CH_0181_edge_case.pdf,neurologie,true,reviewed,altes Initiale Metadaten neurochirurgie -> neurologie
+SYN_CH_0182_consult.pdf,neurochirurgie,false,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0183_specialty_ambulatory.pdf,endokrinologie,true,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0184_specialty_ambulatory.pdf,urologie,false,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0185_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0186_discharge_transfer.pdf,pflegekoordination,true,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0187_consult.pdf,neurochirurgie,false,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0188_diagnostic.pdf,kardiologie,true,uncertain,altes Initiale Metadaten pathologie -> kardiologie manuell unsicher wegen gemischter/unspezifischer Signale
+SYN_CH_0189_administrative.pdf,patientenadministration,true,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0190_consult.pdf,neurochirurgie,true,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0191_general_referral.pdf,allgemeinambulanz,true,reviewed,altes Initiale Metadaten innere_medizin -> allgemeinambulanz
+SYN_CH_0192_diagnostic.pdf,kardiologie,false,uncertain,altes Initiale Metadaten labor -> kardiologie manuell unsicher wegen gemischter/unspezifischer Signale
+SYN_CH_0193_consult.pdf,palliativmedizin,false,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0194_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0195_diagnostic.pdf,pathologie,true,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0196_general_referral.pdf,kardiologie,true,reviewed,altes Initiale Metadaten innere_medizin -> kardiologie
+SYN_CH_0197_diagnostic.pdf,medikationsmanagement,true,reviewed,altes Initiale Metadaten endoskopie -> medikationsmanagement
+SYN_CH_0198_administrative.pdf,patientenadministration,false,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0199_specialty_ambulatory.pdf,urologie,true,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0200_consult.pdf,neurochirurgie,true,reviewed,altes Initiale Metadaten bestätigt
+SYN_CH_0201_diagnostic.pdf,labor,true,reviewed,Laborbericht -> Labor
+SYN_CH_0202_preop_anesthesia.pdf,anaesthesie_op_disposition,false,reviewed,Praeoperative Abklaerung -> Anaesthesie/OP-Disposition
+SYN_CH_0203_discharge_transfer.pdf,pflegekoordination,false,reviewed,Uebertritt/Entlassung mit Koordinationsbedarf -> Pflegekoordination
+SYN_CH_0204_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,Praeoperative Anaesthesieangaben -> Anaesthesie/OP-Disposition
+SYN_CH_0205_diagnostic.pdf,radiologie,true,reviewed,Radiologieauftrag sichtbar; bisheriges Initiale Metadaten Kardiologie ist falsch
+SYN_CH_0206_specialty_ambulatory.pdf,rheumatologie,false,reviewed,Sprechstunde Rheumatologie explizit
+SYN_CH_0207_diagnostic.pdf,endoskopie,true,reviewed,Endoskopie-Anfrage sichtbar; altes Initiale Metadaten Labor falsch
+SYN_CH_0208_administrative.pdf,versicherungskoordination,true,reviewed,Explizite Versicherungskoordination
+SYN_CH_0209_edge_case.pdf,neurologie,true,uncertain,Konflikt im Dokument; neurologische Fragestellung ueberwiegt
+SYN_CH_0210_diagnostic.pdf,pathologie,true,reviewed,Pathologie-Vorbericht explizit
+SYN_CH_0211_rehab_social.pdf,sozialdienst,true,reviewed,Sozialdienstliche Abklaerung explizit; altes Initiale Metadaten Reha zu grob
+SYN_CH_0212_discharge_transfer.pdf,pflegekoordination,true,reviewed,Uebertritt/Entlassung -> Pflegekoordination
+SYN_CH_0213_rehab_social.pdf,sozialdienst,false,reviewed,Sozialdienst explizit; altes Initiale Metadaten Reha falsch
+SYN_CH_0214_general_referral.pdf,notfallnahe_abklaerung,true,reviewed,Same-day/unklare Blutung -> notfallnahe Abklaerung
+SYN_CH_0215_general_referral.pdf,allgemeinambulanz,true,reviewed,Allgemeine Anmeldung ohne klare Spezialsprechstunde -> Allgemeinambulanz
+SYN_CH_0216_medication_nursing.pdf,medikationsmanagement,false,reviewed,Medikationsplan dominiert
+SYN_CH_0217_rehab_social.pdf,reha,false,reviewed,Funktionelle Rehabilitation/Reduktion AZ-EZ -> Reha
+SYN_CH_0218_consult.pdf,wundsprechstunde,true,reviewed,Wundsprechstunde explizit
+SYN_CH_0219_administrative.pdf,versicherungskoordination,false,reviewed,Versicherungskoordination/Kostengutsprache explizit
+SYN_CH_0220_rehab_social.pdf,sozialdienst,true,reviewed,Sozialdienst explizit
+SYN_CH_0221_medication_nursing.pdf,medikationsmanagement,true,reviewed,Medikationsplan/Medikamentenerinnerung -> Medikationsmanagement
+SYN_CH_0222_consult.pdf,infektiologie,true,reviewed,ESBL/Infekt-Konsil ueberwiegt -> Infektiologie aber Top-3 enthält Infektiologie
+SYN_CH_0223_administrative.pdf,patientenadministration,true,uncertain,Administrative Aufnahmeunterlagen fehlen; Versicherungsbezug macht Fall knapp
+SYN_CH_0224_administrative.pdf,versicherungskoordination,false,reviewed,Kostengutsprache/Deckungsklaerung -> Versicherungskoordination
+SYN_CH_0225_general_referral.pdf,notfallnahe_abklaerung,true,reviewed,Notfallnahe Abklaerung explizit
+SYN_CH_0226_discharge_transfer.pdf,pflegekoordination,true,reviewed,Entlassungs-/Transferkoordination mit Mobilisationsbedarf -> Pflegekoordination
+SYN_CH_0227_diagnostic.pdf,radiologie,true,reviewed,Radiologieauftrag explizit; altes Initiale Metadaten Labor falsch
+SYN_CH_0228_specialty_ambulatory.pdf,pneumologie,false,reviewed,COPD/Dyspnoe -> Pneumologie
+SYN_CH_0229_specialty_ambulatory.pdf,neurologie,true,reviewed,Neurologie Sprechstunde explizit
+SYN_CH_0230_administrative.pdf,versicherungskoordination,true,reviewed,Explizite Versicherungskoordination
+SYN_CH_0231_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,OP-/Praeop-Angaben -> Anaesthesie/OP-Disposition
+SYN_CH_0232_administrative.pdf,patientenadministration,false,reviewed,Fehlende Aufnahme-/Krankenkassenunterlagen -> Patientenadministration
+SYN_CH_0233_discharge_transfer.pdf,pflegekoordination,true,reviewed,Uebertrittsbericht -> Pflegekoordination
+SYN_CH_0234_administrative.pdf,versicherungskoordination,true,reviewed,Explizite Versicherungskoordination
+SYN_CH_0235_rehab_social.pdf,sozialdienst,true,reviewed,Sozialdienstliche Abklaerung explizit; altes Initiale Metadaten Reha falsch
+SYN_CH_0236_rehab_social.pdf,physiotherapie,true,uncertain,"Text fordert Physiotherapie, Kopf nennt Sozialdienstliche Uebertrittsanfrage"
+SYN_CH_0237_general_referral.pdf,kardiologie,true,reviewed,Kardiale Leitsymptome ueberwiegen trotz Allgemeine Anmeldung
+SYN_CH_0238_general_referral.pdf,notfallnahe_abklaerung,true,reviewed,Notfallnahe Abklaerung explizit
+SYN_CH_0239_diagnostic.pdf,labor,true,reviewed,Laborbericht -> Labor
+SYN_CH_0240_discharge_transfer.pdf,pflegekoordination,false,reviewed,Entlassung/Uebertritt -> Pflegekoordination
+SYN_CH_0241_preop_anesthesia.pdf,anaesthesie_op_disposition,false,reviewed,Praeoperative Abklaerung -> Anaesthesie/OP-Disposition
+SYN_CH_0242_discharge_transfer.pdf,pflegekoordination,false,reviewed,Dimissione/trasferimento -> Pflegekoordination
+SYN_CH_0243_rehab_social.pdf,physiotherapie,true,uncertain,Physio/Ergo gemischt; wegen Mobilitaet bestes Ziel Physiotherapie
+SYN_CH_0244_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,OP-/Praeop-Angaben -> Anaesthesie/OP-Disposition
+SYN_CH_0245_discharge_transfer.pdf,pflegekoordination,true,reviewed,Uebertrittsvorinformation -> Pflegekoordination
+SYN_CH_0246_medication_nursing.pdf,medikationsmanagement,true,reviewed,Medikamenten-/Allergieliste -> Medikationsmanagement
+SYN_CH_0247_edge_case.pdf,gastroenterologie,true,reviewed,GI-Blutung/Teerstuhl -> Gastroenterologie
+SYN_CH_0248_specialty_ambulatory.pdf,neurologie,true,reviewed,Neurologie Sprechstunde explizit
+SYN_CH_0249_consult.pdf,palliativmedizin,true,reviewed,Palliativmedizin explizit
+SYN_CH_0250_rehab_social.pdf,physiotherapie,false,reviewed,Physiotherapie explizit im Motiv
+SYN_CH_0251_discharge_transfer.pdf,pflegekoordination,false,reviewed,Übertritt/Transfer mit Pflege- und Koordinationsbedarf
+SYN_CH_0252_edge_case.pdf,kardiologie,true,reviewed,Kardiale Fragestellung sichtbar; current initiale Metadaten Ergotherapie nicht gestützt
+SYN_CH_0253_general_referral.pdf,allgemeinambulanz,true,reviewed,Generische Anmeldung ohne spezifische Fachzielstelle; current initiale Metadaten Chirurgie nicht gestützt
+SYN_CH_0254_specialty_ambulatory.pdf,kardiologie,true,reviewed,Explizite Kardiologie-Anmeldung
+SYN_CH_0255_specialty_ambulatory.pdf,dermatologie,true,reviewed,Explizite Dermatologie-Anmeldung
+SYN_CH_0256_specialty_ambulatory.pdf,rheumatologie,true,reviewed,Explizite Rheumatologie-Anmeldung
+SYN_CH_0257_general_referral.pdf,notfallnahe_abklaerung,true,reviewed,Same-day/zeitnahe Abklärung ist das administrative Ziel
+SYN_CH_0258_discharge_transfer.pdf,pflegekoordination,true,reviewed,Transfer-/Entlassungskoordination; current initiale Metadaten Reha zu eng
+SYN_CH_0259_edge_case.pdf,kardiologie,true,reviewed,"Kopf widerspricht Fragestellung, aber primäre Fragestellung ist kardial"
+SYN_CH_0260_general_referral.pdf,kardiologie,true,reviewed,Kardiale Abklärung naheliegend; current initiale Metadaten Notfallnähe nicht sichtbar
+SYN_CH_0261_general_referral.pdf,innere_medizin,true,reviewed,Explizit internistische Ursache; current initiale Metadaten Notfallnähe nicht gestützt
+SYN_CH_0262_consult.pdf,wundsprechstunde,true,reviewed,Explizite Wundsprechstunde
+SYN_CH_0263_general_referral.pdf,allgemeinambulanz,true,uncertain,Keine eindeutige Fachzielstelle; beste administrative Zielstelle Allgemeinambulanz
+SYN_CH_0264_discharge_transfer.pdf,pflegekoordination,true,reviewed,Übertritt mit Hilfestellungs-/Koordinationsbedarf
+SYN_CH_0265_general_referral.pdf,kardiologie,false,reviewed,Kardiale Abklärung sichtbar; current initiale Metadaten Innere Medizin zu breit
+SYN_CH_0266_specialty_ambulatory.pdf,gastroenterologie,true,reviewed,Explizite Gastroenterologie-Anmeldung
+SYN_CH_0267_specialty_ambulatory.pdf,kardiologie,true,reviewed,Explizite Kardiologie-Anmeldung
+SYN_CH_0268_general_referral.pdf,allgemeinambulanz,true,reviewed,Generische Patientenanmeldung ohne Fachziel
+SYN_CH_0269_specialty_ambulatory.pdf,endokrinologie,true,reviewed,Explizite Endokrinologie-Anmeldung
+SYN_CH_0270_general_referral.pdf,kardiologie,true,reviewed,Kardiale Abklärung sichtbar
+SYN_CH_0271_consult.pdf,schmerzsprechstunde,true,reviewed,Primäre Frage ist Schmerzbeurteilung
+SYN_CH_0272_general_referral.pdf,kardiologie,true,reviewed,Kardiale Abklärung sichtbar; current initiale Metadaten Notfallnähe nicht gestützt
+SYN_CH_0273_specialty_ambulatory.pdf,urologie,true,reviewed,Explizite Urologie-Anmeldung
+SYN_CH_0274_diagnostic.pdf,pathologie,true,reviewed,Pathologie-Vorbericht statt Labor
+SYN_CH_0275_consult.pdf,palliativmedizin,true,reviewed,Explizite Palliativmedizin-Anfrage
+SYN_CH_0276_discharge_transfer.pdf,pflegekoordination,true,reviewed,Übertritt mit Pflegebedarf; current initiale Metadaten Reha zu eng
+SYN_CH_0277_medication_nursing.pdf,medikationsmanagement,false,reviewed,Medikationsliste ist primärer administrativer Inhalt
+SYN_CH_0278_diagnostic.pdf,pathologie,false,reviewed,Pathologie-Vorbericht; current initiale Metadaten Kardiologie nicht gestützt
+SYN_CH_0279_general_referral.pdf,innere_medizin,true,reviewed,Explizit internistische Differenzialdiagnostik
+SYN_CH_0280_discharge_transfer.pdf,pflegekoordination,false,reviewed,Entlassungs-/Übertrittskoordination
+SYN_CH_0281_discharge_transfer.pdf,pflegekoordination,true,reviewed,Übertritt mit Koordinationshinweis
+SYN_CH_0282_general_referral.pdf,orthopaedie,true,uncertain,"Orthopädie/Trauma bestes Ziel, aber soziale/pflegerische Aspekte machen es nicht völlig eindeutig"
+SYN_CH_0283_consult.pdf,schmerzsprechstunde,true,reviewed,Explizite Schmerzsprechstunde
+SYN_CH_0284_diagnostic.pdf,kardiologie,false,uncertain,Diagnostisches EKG-Dokument ohne Zielstelle; Kardiologie ist bestes administratives Ziel
+SYN_CH_0285_rehab_social.pdf,physiotherapie,true,reviewed,Explizite ambulante Physiotherapie
+SYN_CH_0286_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,Präoperative/Anästhesie-Disposition
+SYN_CH_0287_administrative.pdf,versicherungskoordination,true,reviewed,"Versicherungs-/Deckungsfrage, nicht allgemeine Patientenadministration"
+SYN_CH_0288_diagnostic.pdf,radiologie,false,reviewed,Expliziter Radiologieauftrag
+SYN_CH_0289_medication_nursing.pdf,pflegekoordination,true,reviewed,Pflegebericht mit Unterstützungsbedarf
+SYN_CH_0290_discharge_transfer.pdf,pflegekoordination,true,reviewed,Übertrittskoordination; current initiale Metadaten Reha zu eng
+SYN_CH_0291_general_referral.pdf,orthopaedie,false,uncertain,"Orthopädie/Trauma bestes Ziel, aber Sozial-/Spitex-Thema bleibt mitbeteiligt"
+SYN_CH_0292_general_referral.pdf,innere_medizin,true,reviewed,Explizit internistische Differenzialdiagnostik
+SYN_CH_0293_medication_nursing.pdf,medikationsmanagement,true,reviewed,Medikationsplan ist primärer administrativer Inhalt
+SYN_CH_0294_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,Präoperative/Anästhesie-Disposition
+SYN_CH_0295_discharge_transfer.pdf,pflegekoordination,true,reviewed,Entlassungs-/Übertrittskoordination
+SYN_CH_0296_consult.pdf,infektiologie,false,reviewed,Infektiologische Antibiotikaführung
+SYN_CH_0297_discharge_transfer.pdf,pflegekoordination,true,reviewed,Übertrittskoordination; current initiale Metadaten Allgemeinambulanz zu breit
+SYN_CH_0298_discharge_transfer.pdf,pflegekoordination,false,reviewed,Übertrittskoordination
+SYN_CH_0299_rehab_social.pdf,sozialdienst,true,reviewed,Explizite sozialdienstliche Übertrittsanfrage
+SYN_CH_0300_specialty_ambulatory.pdf,endoskopie,true,reviewed,Spezifische Koloskopie-/Vorbereitungsfrage current initiale Metadaten Gastro zu breit
+SYN_CH_0301_preop_anesthesia.pdf,anaesthesie_op_disposition,false,reviewed,Präoperative Anästhesie-/OP-Disposition sichtbar
+SYN_CH_0302_medication_nursing.pdf,medikationsmanagement,true,reviewed,"Dokumentkern ist Medikations-/Allergieliste, nicht allgemeine Patientenadministration"
+SYN_CH_0303_consult.pdf,infektiologie,true,uncertain,"Kein Fachziel im Kopf; Infektverdacht ist der stärkste sichtbare Zielhinweis, aber Psychiatrie/Geriatrie überlappen"
+SYN_CH_0304_administrative.pdf,versicherungskoordination,false,reviewed,Versicherung/Kostengutsprache explizit
+SYN_CH_0305_discharge_transfer.pdf,pflegekoordination,true,reviewed,Übertritts- und Pflegekoordination sichtbar
+SYN_CH_0306_specialty_ambulatory.pdf,endoskopie,true,reviewed,ÖGD/Teerstuhl spricht für Endoskopie statt allgemeine Gastroenterologie
+SYN_CH_0307_consult.pdf,palliativmedizin,true,reviewed,Palliativmedizin explizit
+SYN_CH_0308_general_referral.pdf,allgemeinambulanz,true,uncertain,"Kein klares Fachziel sichtbar; Allgemeinambulanz ist beste administrative Route, altes Chirurgie-Initiale Metadaten nicht belegt"
+SYN_CH_0309_specialty_ambulatory.pdf,endokrinologie,true,reviewed,Endokrinologie explizit
+SYN_CH_0310_general_referral.pdf,kardiologie,true,reviewed,Kardiologische Zeichen dominieren; altes Innere-Medizin-Initiale Metadaten zu breit
+SYN_CH_0311_preop_anesthesia.pdf,anaesthesie_op_disposition,false,reviewed,Präoperative Anästhesie-/OP-Disposition explizit
+SYN_CH_0312_consult.pdf,palliativmedizin,true,reviewed,Palliativmedizinische Fragestellung sichtbar
+SYN_CH_0313_specialty_ambulatory.pdf,nephrologie,true,reviewed,Nephrologie explizit
+SYN_CH_0314_general_referral.pdf,allgemeinambulanz,true,reviewed,Allgemeine Patientenanmeldung ohne explizite Orthopädie
+SYN_CH_0315_discharge_transfer.pdf,pflegekoordination,true,reviewed,Austritt/Übertritt mit Mobilisations- und Transferbedarf
+SYN_CH_0316_general_referral.pdf,allgemeinambulanz,true,reviewed,Unspezifische allgemeine Abklärung ohne Fachziel
+SYN_CH_0317_rehab_social.pdf,physiotherapie,true,uncertain,"Freitext verlangt Physiotherapie; Titel nennt Sozialdienstliche Übertrittsanfrage, daher unsicher"
+SYN_CH_0318_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,Präoperative OP-/Anästhesie-Disposition explizit
+SYN_CH_0319_medication_nursing.pdf,medikationsmanagement,true,reviewed,Medikationsmanagement ist der sichtbare Kern
+SYN_CH_0320_edge_case.pdf,rheumatologie,true,reviewed,Rheumatologischer Hinweis sichtbar
+SYN_CH_0321_administrative.pdf,versicherungskoordination,true,reviewed,Versicherungskoordination explizit
+SYN_CH_0322_consult.pdf,psychiatrie,true,reviewed,Psychiatrie explizit
+SYN_CH_0323_general_referral.pdf,innere_medizin,true,reviewed,Internistische Abklärung explizit
+SYN_CH_0324_general_referral.pdf,innere_medizin,true,reviewed,Innere Medizin explizit
+SYN_CH_0325_discharge_transfer.pdf,pflegekoordination,true,reviewed,Übertritt mit Pflege-/Transferbedarf
+SYN_CH_0326_discharge_transfer.pdf,pflegekoordination,true,reviewed,Entlassungs-/Transferbericht mit Pflegekoordination
+SYN_CH_0327_general_referral.pdf,innere_medizin,false,reviewed,Internistische Abklärung sichtbar
+SYN_CH_0328_general_referral.pdf,allgemeinambulanz,true,reviewed,Allgemeine Abklärungsanmeldung ohne Fachziel
+SYN_CH_0329_diagnostic.pdf,labor,true,reviewed,"Diagnostikinhalt ist Laborbericht, nicht Endoskopie"
+SYN_CH_0330_discharge_transfer.pdf,pflegekoordination,true,reviewed,Austritt/Übertritt mit Mobilisationsbedarf
+SYN_CH_0331_specialty_ambulatory.pdf,nephrologie,true,reviewed,Nephrologische Fragestellung sichtbar
+SYN_CH_0332_consult.pdf,psychiatrie,false,reviewed,Psychiatrische Fragestellung sichtbar
+SYN_CH_0333_discharge_transfer.pdf,pflegekoordination,false,reviewed,Austritt/Übertritt mit Transferbedarf
+SYN_CH_0334_rehab_social.pdf,physiotherapie,true,reviewed,Physiotherapie explizit
+SYN_CH_0335_consult.pdf,orthopaedie_wirbelsaeule,true,reviewed,Orthopädie/Wirbelsäule explizit
+SYN_CH_0336_general_referral.pdf,innere_medizin,true,reviewed,Internistische Abklärung sichtbar
+SYN_CH_0337_consult.pdf,wundsprechstunde,false,reviewed,Wundsprechstunde explizit
+SYN_CH_0338_consult.pdf,neurochirurgie,true,reviewed,Neurochirurgie explizit
+SYN_CH_0339_specialty_ambulatory.pdf,endoskopie,true,reviewed,Konkrete Koloskopie-/Endoskopie-Anfrage
+SYN_CH_0340_specialty_ambulatory.pdf,neurologie,false,reviewed,Neurologie explizit
+SYN_CH_0341_general_referral.pdf,innere_medizin,false,reviewed,Internistische Abklärung sichtbar
+SYN_CH_0342_specialty_ambulatory.pdf,gastroenterologie,true,reviewed,"Gastroenterologie explizit, keine konkrete Endoskopie-Anforderung im Text"
+SYN_CH_0343_specialty_ambulatory.pdf,dermatologie,true,reviewed,Dermatologische Fragestellung sichtbar
+SYN_CH_0344_discharge_transfer.pdf,pflegekoordination,false,reviewed,Entlassungs-/Transferbericht mit Pflegekoordination
+SYN_CH_0345_consult.pdf,infektiologie,true,reviewed,Infektiologie explizit
+SYN_CH_0346_administrative.pdf,versicherungskoordination,false,reviewed,Versicherungskoordination explizit
+SYN_CH_0347_consult.pdf,neurochirurgie,false,reviewed,Neurochirurgie explizit
+SYN_CH_0348_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,Präoperative Anästhesie-/OP-Disposition explizit
+SYN_CH_0349_consult.pdf,psychiatrie,true,reviewed,Psychiatrie steht explizit im Konsilkopf
+SYN_CH_0350_specialty_ambulatory.pdf,rheumatologie,false,reviewed,Rheumatologie explizit
+SYN_CH_0351_diagnostic.pdf,endoskopie,false,reviewed,Alt-Initiale Metadaten Kardiologie ist nicht gestützt
+SYN_CH_0352_rehab_social.pdf,reha,true,uncertain,Scan/OCR ist verrauscht und Reha/Sozialdienst sind gemischt; Reha ist bestes administratives Ziel
+SYN_CH_0353_specialty_ambulatory.pdf,rheumatologie,false,reviewed,Explizite Rheumatologie-Anmeldung
+SYN_CH_0354_general_referral.pdf,notfallnahe_abklaerung,true,reviewed,Same-day-Abklärung überwiegt gegenüber breiter Innere-Medizin-Route
+SYN_CH_0355_general_referral.pdf,innere_medizin,true,reviewed,Internistische Abklärung sichtbar
+SYN_CH_0356_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,Präoperative Anästhesie-/OP-Disposition
+SYN_CH_0357_general_referral.pdf,kardiologie,true,reviewed,Kardiale Leitsignale dominieren die allgemeine Anmeldung
+SYN_CH_0358_general_referral.pdf,allgemeinambulanz,true,reviewed,Keine klare chirurgische Zielstelle sichtbar
+SYN_CH_0359_diagnostic.pdf,endoskopie,true,reviewed,Explizite Endoskopie-Anfrage
+SYN_CH_0360_medication_nursing.pdf,pflegekoordination,true,reviewed,Pflege-/Verlaufsthema überwiegt
+SYN_CH_0361_diagnostic.pdf,kardiologie,true,reviewed,EKG/Rhythmusbefund gehört zur Kardiologie; altes Labor-Initiale Metadaten ist nicht gestützt
+SYN_CH_0362_general_referral.pdf,allgemeinambulanz,false,reviewed,Generische Anmeldung ohne klare Spezialsprechstunde
+SYN_CH_0363_discharge_transfer.pdf,pflegekoordination,true,reviewed,Übertritts-/Koordinationsfall
+SYN_CH_0364_specialty_ambulatory.pdf,gynaekologie,false,reviewed,Explizite Gynäkologie-Anmeldung
+SYN_CH_0365_diagnostic.pdf,laboradministration,true,reviewed,Laborbericht/Laboradministration sichtbar
+SYN_CH_0366_general_referral.pdf,kardiologie,true,reviewed,Kardiale Rhythmus-/Dyspnoe-Fragestellung
+SYN_CH_0367_rehab_social.pdf,reha,true,reviewed,Rehabilitationsbedarf steht im Vordergrund
+SYN_CH_0368_consult.pdf,orthopaedie_wirbelsaeule,true,reviewed,Explizite Orthopädie/Wirbelsäule-Konsilanfrage
+SYN_CH_0369_general_referral.pdf,allgemeinambulanz,true,reviewed,Generische Anmeldung ohne klare chirurgische Zielstelle
+SYN_CH_0370_edge_case.pdf,kardiologie,true,reviewed,Trotz Admin-/Beilagenproblemen ist die Hauptfragestellung kardial
+SYN_CH_0371_specialty_ambulatory.pdf,gastroenterologie,true,reviewed,Explizite Gastroenterologie-Anmeldung
+SYN_CH_0372_medication_nursing.pdf,medikationsmanagement,true,reviewed,Medikationsliste/-management ist primär
+SYN_CH_0373_edge_case.pdf,neurologie,true,reviewed,Neurologische Fragestellung trotz unvollständigem Eingangsdokument
+SYN_CH_0374_rehab_social.pdf,reha,true,reviewed,Reha-Ziel überwiegt gegenüber enger Physio/Ergo-Zuteilung
+SYN_CH_0375_discharge_transfer.pdf,pflegekoordination,false,reviewed,Übertritts-/Pflegekoordination statt Allgemeinambulanz
+SYN_CH_0376_specialty_ambulatory.pdf,pneumologie,true,reviewed,Explizite Pneumologie-Anmeldung
+SYN_CH_0377_diagnostic.pdf,endoskopie,true,reviewed,Alt-Initiale Metadaten Radiologie ist nicht gestützt
+SYN_CH_0378_rehab_social.pdf,physiotherapie,true,reviewed,Explizite ambulante Physiotherapie
+SYN_CH_0379_diagnostic.pdf,pathologie,false,reviewed,Expliziter Pathologie-Vorbericht
+SYN_CH_0380_medication_nursing.pdf,medikationsmanagement,true,reviewed,Medikationsmanagement steht vor Pflegekoordination
+SYN_CH_0381_discharge_transfer.pdf,pflegekoordination,false,reviewed,Übertritt mit Pflege-/Koordinationsbedarf
+SYN_CH_0382_administrative.pdf,versicherungskoordination,true,reviewed,Explizite Versicherungskoordination
+SYN_CH_0383_specialty_ambulatory.pdf,nephrologie,true,reviewed,Nephrologische Fragestellung sichtbar
+SYN_CH_0384_discharge_transfer.pdf,pflegekoordination,true,reviewed,Übertritts-/Pflegekoordination
+SYN_CH_0385_specialty_ambulatory.pdf,gastroenterologie,false,reviewed,Explizite Gastroenterologie-Anmeldung
+SYN_CH_0386_general_referral.pdf,kardiologie,true,reviewed,Kardiale Leitsignale dominieren
+SYN_CH_0387_general_referral.pdf,allgemeinambulanz,true,reviewed,Generische Anmeldung ohne klare Spezialsprechstunde
+SYN_CH_0388_general_referral.pdf,notfallnahe_abklaerung,true,reviewed,Notfallnahe/dringliche Weiterabklärung sichtbar
+SYN_CH_0389_discharge_transfer.pdf,pflegekoordination,true,reviewed,Übertritts-/Pflegekoordination
+SYN_CH_0390_edge_case.pdf,endoskopie,true,reviewed,"Kopf ist widersprüchlich, aber die Fragestellung ist endoskopisch"
+SYN_CH_0391_rehab_social.pdf,reha,true,reviewed,Reha-Ziel überwiegt gegenüber enger Physio/Ergo-Zuteilung
+SYN_CH_0392_medication_nursing.pdf,medikationsmanagement,true,reviewed,Medikationsmanagement steht im Vordergrund
+SYN_CH_0393_general_referral.pdf,allgemeinambulanz,true,reviewed,Generische Anmeldung ohne klare chirurgische Zielstelle
+SYN_CH_0394_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,Präoperative Anästhesie-/OP-Disposition
+SYN_CH_0395_specialty_ambulatory.pdf,endokrinologie,true,reviewed,Endokrinologische Fragestellung sichtbar
+SYN_CH_0396_diagnostic.pdf,radiologie,true,reviewed,Expliziter Radiologieauftrag; Alt-Initiale Metadaten Kardiologie ist nicht gestützt
+SYN_CH_0397_preop_anesthesia.pdf,anaesthesie_op_disposition,false,reviewed,Präoperative Anästhesie-/OP-Disposition
+SYN_CH_0398_discharge_transfer.pdf,pflegekoordination,true,reviewed,Übertritts-/Pflegekoordination
+SYN_CH_0399_administrative.pdf,versicherungskoordination,false,reviewed,Explizite Versicherungskoordination
+SYN_CH_0400_discharge_transfer.pdf,pflegekoordination,true,reviewed,Übertritts-/Pflegekoordination
+SYN_CH_0401_general_referral.pdf,innere_medizin,false,reviewed,"Allgemeine Zuweisung, aber Fragestellung ist ausdrücklich internistisch"
+SYN_CH_0402_rehab_social.pdf,reha,false,reviewed,Rehabilitation ist das Hauptziel; altes Initiale Metadaten Ergotherapie ist zu eng
+SYN_CH_0403_specialty_ambulatory.pdf,kardiologie,true,reviewed,Explizite Kardiologie-Sprechstunde
+SYN_CH_0404_discharge_transfer.pdf,pflegekoordination,false,reviewed,Übertritts-/Pflegekoordination ist sichtbar
+SYN_CH_0405_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,Präoperative Anästhesie-/OP-Disposition
+SYN_CH_0406_administrative.pdf,versicherungskoordination,true,reviewed,Versicherung/Kostengutsprache dominiert; altes Initiale Metadaten Patientenadministration zu breit
+SYN_CH_0407_specialty_ambulatory.pdf,endokrinologie,false,reviewed,Explizite Endokrinologie-Sprechstunde
+SYN_CH_0408_consult.pdf,psychiatrie,true,reviewed,Explizite Psychiatrie-Konsilanfrage
+SYN_CH_0409_general_referral.pdf,allgemeinambulanz,true,reviewed,Keine klare Spezialroute; allgemeine Vortriage passt; altes Initiale Metadaten Chirurgie nicht sichtbar
+SYN_CH_0410_discharge_transfer.pdf,pflegekoordination,true,reviewed,Kern ist Austritt/Übertritt; Versicherungsnotiz sekundär
+SYN_CH_0411_general_referral.pdf,notfallnahe_abklaerung,false,reviewed,Notfallnahe Folgeabklärung explizit; altes Initiale Metadaten Chirurgie nicht sichtbar
+SYN_CH_0412_medication_nursing.pdf,pflegekoordination,false,uncertain,Beilage ohne klare Anfrage; Pflegekoordination ist bestes administratives Ziel
+SYN_CH_0413_consult.pdf,neurochirurgie,true,reviewed,Explizite Neurochirurgie-Konsilanfrage
+SYN_CH_0414_specialty_ambulatory.pdf,gastroenterologie,true,reviewed,Explizite Gastroenterologie-Sprechstunde
+SYN_CH_0415_consult.pdf,psychiatrie,true,reviewed,Explizite Psychiatrie-Konsilanfrage
+SYN_CH_0416_general_referral.pdf,kardiologie,true,reviewed,Kardiale Leitsignale dominieren die allgemeine Anmeldung
+SYN_CH_0417_general_referral.pdf,notfallnahe_abklaerung,true,reviewed,Notfallnahe Folgeabklärung sichtbar; altes Initiale Metadaten Chirurgie nicht begründet
+SYN_CH_0418_specialty_ambulatory.pdf,gynaekologie,false,reviewed,Gynäkologie-Sprechstunde ist explizit
+SYN_CH_0419_specialty_ambulatory.pdf,gynaekologie,false,reviewed,Gynäkologische Vorbefunde bestimmen die Route
+SYN_CH_0420_medication_nursing.pdf,medikationsmanagement,true,reviewed,Medikations-/Allergieliste steht im Vordergrund
+SYN_CH_0421_specialty_ambulatory.pdf,urologie,true,reviewed,Urologische Abklärung klar sichtbar
+SYN_CH_0422_specialty_ambulatory.pdf,urologie,false,reviewed,Explizite Urologie-Sprechstunde
+SYN_CH_0423_administrative.pdf,patientenadministration,true,reviewed,Primär Personalienkorrektur/Patientenaufnahme; Versicherung sekundär
+SYN_CH_0424_discharge_transfer.pdf,pflegekoordination,true,reviewed,Übertritt und Pflegebedarf sichtbar
+SYN_CH_0425_consult.pdf,palliativmedizin,true,uncertain,"Therapiezielklärung spricht für Palliativmedizin, überschneidet sich aber mit Sozialdienst"
+SYN_CH_0426_consult.pdf,palliativmedizin,true,reviewed,Explizite Palliativmedizin-Konsilanfrage
+SYN_CH_0427_medication_nursing.pdf,medikationsmanagement,true,reviewed,Medikationsliste ist Hauptinhalt; altes Initiale Metadaten Patientenadministration falsch
+SYN_CH_0428_general_referral.pdf,innere_medizin,true,reviewed,Internistische Abklärung explizit
+SYN_CH_0429_discharge_transfer.pdf,pflegekoordination,true,reviewed,Übertritts-/Pflegekoordination statt Allgemeinambulanz
+SYN_CH_0430_specialty_ambulatory.pdf,endoskopie,true,reviewed,Spezifische Koloskopie-/Endoskopieanfrage; altes Initiale Metadaten Gastroenterologie zu breit
+SYN_CH_0431_diagnostic.pdf,radiologie,true,reviewed,Radiologieauftrag sichtbar; altes Initiale Metadaten Pathologie falsch
+SYN_CH_0432_diagnostic.pdf,endoskopie,false,reviewed,"Diagnostikauftrag ist Endoskopie, nicht Labor"
+SYN_CH_0433_diagnostic.pdf,endoskopie,false,reviewed,"Diagnostikauftrag ist Endoskopie, nicht Radiologie"
+SYN_CH_0434_preop_anesthesia.pdf,anaesthesie_op_disposition,false,reviewed,OP-/Anästhesie-Disposition explizit
+SYN_CH_0435_preop_anesthesia.pdf,anaesthesie_op_disposition,false,reviewed,Präoperative Anästhesieabklärung
+SYN_CH_0436_discharge_transfer.pdf,pflegekoordination,true,reviewed,Übertritt und Pflegebericht-Hinweis sichtbar
+SYN_CH_0437_general_referral.pdf,allgemeinambulanz,true,uncertain,"Keine klare Spezialsprechstunde; Allgemeinambulanz bestes Aufnahmeziel, aber Orthopädie/Sozialdienst sind plausibel"
+SYN_CH_0438_specialty_ambulatory.pdf,kardiologie,true,reviewed,Explizite Kardiologie-Sprechstunde
+SYN_CH_0439_consult.pdf,wundsprechstunde,true,reviewed,Explizite Wundsprechstunde
+SYN_CH_0440_specialty_ambulatory.pdf,endokrinologie,true,reviewed,Endokrinologische Fragestellung trotz anderer Kopfnotiz
+SYN_CH_0441_general_referral.pdf,kardiologie,true,reviewed,Kardiale Leitsignale dominieren; altes Initiale Metadaten Notfallnähe zu grob
+SYN_CH_0442_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,Präoperative Anästhesie-Disposition
+SYN_CH_0443_specialty_ambulatory.pdf,neurologie,true,reviewed,Explizite Neurologie-Sprechstunde
+SYN_CH_0444_specialty_ambulatory.pdf,endokrinologie,true,reviewed,Endokrinologische Schilddrüsen-/Diabetesfrage
+SYN_CH_0445_edge_case.pdf,innere_medizin,true,reviewed,Internistische Differentialabklärung klarer als Versicherungsnotiz; altes Initiale Metadaten Radiologie falsch
+SYN_CH_0446_general_referral.pdf,kardiologie,true,reviewed,Kardiale Leitsignale dominieren die allgemeine Anmeldung
+SYN_CH_0447_consult.pdf,infektiologie,true,reviewed,Explizite Infektiologie-Konsilanfrage
+SYN_CH_0448_consult.pdf,neurochirurgie,false,reviewed,Explizite Neurochirurgie-Konsilanfrage
+SYN_CH_0449_edge_case.pdf,notfallnahe_abklaerung,true,reviewed,Notfallnahe Folgeabklärung ist sichtbar; altes Initiale Metadaten Psychiatrie nicht begründet
+SYN_CH_0450_general_referral.pdf,allgemeinambulanz,false,reviewed,Generische Patientenanmeldung ohne klare Spezialsprechstunde
+SYN_CH_0451_specialty_ambulatory.pdf,dermatologie,true,reviewed,Dermatologie ist aus Dokumenttitel und Hautbefund klar
+SYN_CH_0452_specialty_ambulatory.pdf,dermatologie,true,reviewed,"Fax/OCR ist verrauscht, aber dermatologische Vorbefunde sind klar"
+SYN_CH_0453_consult.pdf,schmerzsprechstunde,true,reviewed,Schmerzsprechstunde ist explizit angefragt
+SYN_CH_0454_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,Präoperative/anästhesiologische OP-Disposition
+SYN_CH_0455_general_referral.pdf,allgemeinambulanz,true,reviewed,Generische Anmeldung ohne notfallnahe Formulierung oder klare Spezialsprechstunde
+SYN_CH_0456_discharge_transfer.pdf,pflegekoordination,true,reviewed,Übertritts-/Entlassungskoordination mit Pflege- und Transferbedarf
+SYN_CH_0457_administrative.pdf,versicherungskoordination,true,reviewed,Versicherungsnachweis und Deckung dominieren trotz Personalienkorrektur
+SYN_CH_0458_consult.pdf,orthopaedie_wirbelsaeule,true,reviewed,Wirbelsäulen-/orthopädisches Konsil ist explizit
+SYN_CH_0459_edge_case.pdf,endoskopie,true,reviewed,Koloskopie-/ÖGD-Anfrage ist primär Endoskopie; altes Initiale Metadaten Kardiologie ist falsch
+SYN_CH_0460_specialty_ambulatory.pdf,endoskopie,true,reviewed,Endoskopische Abklärung ist spezifischer als Gastroenterologie
+SYN_CH_0461_preop_anesthesia.pdf,anaesthesie_op_disposition,false,reviewed,Präoperative OP-/Anästhesie-Disposition
+SYN_CH_0462_general_referral.pdf,innere_medizin,true,reviewed,Explizit internistische Abklärung
+SYN_CH_0463_discharge_transfer.pdf,pflegekoordination,true,reviewed,Austritts-/Übertrittskoordination mit Pflegebedarf
+SYN_CH_0464_discharge_transfer.pdf,pflegekoordination,false,reviewed,"Übertrittsdokument, nicht primär Innere Medizin"
+SYN_CH_0465_rehab_social.pdf,reha,false,reviewed,Rehabilitation ist als Gesamtziel genannt
+SYN_CH_0466_consult.pdf,psychiatrie,true,reviewed,Psychiatrische Fragestellung mit Angst/Schlaflosigkeit
+SYN_CH_0467_general_referral.pdf,allgemeinambulanz,false,reviewed,Generische Abklärung ohne klare Orthopädie-Sprechstunde
+SYN_CH_0468_diagnostic.pdf,laboradministration,false,reviewed,Laborbericht gehört zur Laboradministration aber nicht exakt
+SYN_CH_0469_preop_anesthesia.pdf,anaesthesie_op_disposition,false,reviewed,Anästhesie-/OP-Disposition ist explizit
+SYN_CH_0470_preop_anesthesia.pdf,anaesthesie_op_disposition,false,reviewed,Präoperative OP-/Anästhesie-Disposition
+SYN_CH_0471_consult.pdf,orthopaedie_wirbelsaeule,true,reviewed,Wirbelsäulenkonsil ist explizit
+SYN_CH_0472_administrative.pdf,versicherungskoordination,true,reviewed,Versicherungskoordination ist ausdrücklich angefragt
+SYN_CH_0473_consult.pdf,schmerzsprechstunde,true,reviewed,Schmerzsprechstunde ist explizit
+SYN_CH_0474_consult.pdf,neurochirurgie,true,reviewed,Raumforderung mit CT-Vorbefund passt primär Neurochirurgie
+SYN_CH_0475_diagnostic.pdf,pathologie,false,reviewed,Pathologie-Vorbericht ist eindeutig; altes Initiale Metadaten Labor ist falsch
+SYN_CH_0476_specialty_ambulatory.pdf,neurologie,false,reviewed,Neurologische Sprechstundenabklärung
+SYN_CH_0477_consult.pdf,orthopaedie_wirbelsaeule,false,reviewed,Wirbelsäulen-/orthopädisches Konsil ist explizit
+SYN_CH_0478_consult.pdf,wundsprechstunde,true,reviewed,Wundsprechstunde ist explizit
+SYN_CH_0479_rehab_social.pdf,reha,true,reviewed,Rehabilitation ist das primäre Ziel; altes Initiale Metadaten Sozialdienst ist zu breit
+SYN_CH_0480_specialty_ambulatory.pdf,neurologie,false,reviewed,Neurologie ist explizit
+SYN_CH_0481_preop_anesthesia.pdf,anaesthesie_op_disposition,false,reviewed,Anästhesie-/OP-Disposition ist explizit
+SYN_CH_0482_general_referral.pdf,innere_medizin,true,reviewed,Internistische Breitabklärung ist klarer als Chirurgie/Reha
+SYN_CH_0483_specialty_ambulatory.pdf,urologie,true,reviewed,Urologie ist explizit
+SYN_CH_0484_rehab_social.pdf,physiotherapie,true,uncertain,"Dokumentkopf nennt sozialdienstliche Übertrittsanfrage, der konkrete Auftrag ist aber Physiotherapie"
+SYN_CH_0485_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,Präoperative/anästhesiologische OP-Disposition
+SYN_CH_0486_general_referral.pdf,innere_medizin,true,reviewed,Internistische Ursache ausdrücklich genannt
+SYN_CH_0487_specialty_ambulatory.pdf,dermatologie,true,reviewed,Dermatologische Sprechstunde und Hautbefund klar
+SYN_CH_0488_general_referral.pdf,allgemeinambulanz,true,reviewed,Generische Abklärung ohne konkrete Spezialdisziplin
+SYN_CH_0489_general_referral.pdf,allgemeinambulanz,true,reviewed,Generische Abklärung ohne klare Orthopädie-Sprechstunde
+SYN_CH_0490_consult.pdf,psychiatrie,true,reviewed,"Psychiatrie ist explizit, auch bei same-day-Dringlichkeit"
+SYN_CH_0491_general_referral.pdf,innere_medizin,false,reviewed,Internistische Breitabklärung ist das Ziel
+SYN_CH_0492_discharge_transfer.pdf,pflegekoordination,true,reviewed,Übertrittskoordination mit Pflege-/Mobilitätsaspekten
+SYN_CH_0493_specialty_ambulatory.pdf,endokrinologie,true,reviewed,Endokrinologische Diabetesabklärung
+SYN_CH_0494_administrative.pdf,versicherungskoordination,true,reviewed,Versicherungs-/Deckungsunterlagen dominieren
+SYN_CH_0495_diagnostic.pdf,endoskopie,false,reviewed,Endoskopie-Anfrage ist explizit
+SYN_CH_0496_consult.pdf,neurochirurgie,false,reviewed,Neurochirurgie ist explizit
+SYN_CH_0497_preop_anesthesia.pdf,anaesthesie_op_disposition,true,reviewed,Anästhesie-/OP-Disposition ist explizit
+SYN_CH_0498_administrative.pdf,versicherungskoordination,false,reviewed,Versicherungskoordination ist explizit
+SYN_CH_0499_discharge_transfer.pdf,pflegekoordination,true,reviewed,Übertritts-/Pflegekoordination ist primär
+SYN_CH_0500_discharge_transfer.pdf,pflegekoordination,true,reviewed,Visuelle Sichtung bestätigt Austritts-/Transferbericht

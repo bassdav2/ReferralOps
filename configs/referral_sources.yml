@@ -1,0 +1,20 @@
+sources:
+  demo_referral_filesystem:
+    adapter: filesystem
+    path: data/referral_inbox
+    access_groups: [referral_reviewers]
+    contains_patient_data: true
+    source_system: demo_referral_filesystem
+    default_status: active
+    analyze_on_ingest: false
+    analyze_user: sekretariat_kardiologie
+  demo_referral_minio:
+    adapter: minio
+    bucket: referral-demo-inbox
+    prefix: ""
+    access_groups: [referral_reviewers]
+    contains_patient_data: true
+    source_system: demo_referral_minio
+    default_status: active
+    analyze_on_ingest: false
+    analyze_user: sekretariat_kardiologie

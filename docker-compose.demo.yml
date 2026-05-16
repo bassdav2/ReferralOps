@@ -1,0 +1,85 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_DB: hospital_ai
+      POSTGRES_USER: hospital_ai
+      POSTGRES_PASSWORD: hospital_ai
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hospital_ai -d hospital_ai"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+    ports: ["5432:5432"]
+
+  redis:
+    image: redis:7.4-alpine
+    ports: ["6379:6379"]
+
+  minio:
+    image: ${MINIO_IMAGE:-minio/minio:RELEASE.2025-04-22T22-12-26Z}
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: minio
+      MINIO_ROOT_PASSWORD: minio123
+    ports: ["9000:9000", "9001:9001"]
+
+  minio-init:
+    image: ${MINIO_MC_IMAGE:-minio/mc:RELEASE.2025-04-16T18-13-26Z-cpuv1}
+    depends_on:
+      minio:
+        condition: service_started
+    entrypoint:
+      - /bin/sh
+      - -c
+      - |
+        until mc alias set local http://minio:9000 minio minio123 >/dev/null 2>&1; do
+          echo "waiting for MinIO";
+          sleep 1;
+        done;
+        mc mb --ignore-existing local/referral-demo-inbox;
+        mc anonymous set none local/referral-demo-inbox
+    restart: "no"
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+      args:
+        INSTALL_LOCAL_EMBEDDINGS: ${INSTALL_LOCAL_EMBEDDINGS:-false}
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+psycopg://hospital_ai:hospital_ai@postgres:5432/hospital_ai
+      REDIS_URL: redis://redis:6379/0
+      OBJECT_STORE_ENDPOINT: http://minio:9000
+      OBJECT_STORE_BUCKET: referral-demo-inbox
+      OBJECT_STORE_ACCESS_KEY: minio
+      OBJECT_STORE_SECRET_KEY: minio123
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+      minio-init:
+        condition: service_completed_successfully
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "python -c \"import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health', timeout=2)\"",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+    ports: ["8000:8000"]
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+      args:
+        VITE_API_BASE_URL: http://localhost:8000
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports: ["5173:80"]

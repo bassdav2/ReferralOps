@@ -1,0 +1,21 @@
+users:
+  sekretariat_kardiologie:
+    password: demo
+    groups: [all_staff, referral_reviewers, kardiologie]
+    role: referral_reviewer
+
+  hygiene_user:
+    password: demo
+    groups: [all_staff, hygiene]
+    role: staff
+
+  it_admin:
+    password: demo
+    groups: [all_staff, it_users, admin]
+    role: admin
+
+  restricted_user:
+    password: demo
+    groups: [all_staff]
+    role: staff
+

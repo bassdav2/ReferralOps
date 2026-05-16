@@ -1,0 +1,646 @@
+routing_targets:
+  kardiologie:
+    display_name: Kardiologie
+    aliases:
+      - cardiology
+      - kardio
+    allowed_keywords:
+      - thoraxschmerz
+      - dyspnoe
+      - herzinsuffizienz
+      - rhythmusstoerung
+      - rhythmusstörung
+      - synkope
+      - herz
+    forbidden_auto_finalize: true
+
+  radiologie:
+    display_name: Radiologie
+    aliases:
+      - radiology
+      - roentgen
+      - röntgen
+      - radiologie-administration
+      - radiologie administration
+      - bildgebungsbefund
+    allowed_keywords:
+      - mri
+      - mrt
+      - ct
+      - roentgen
+      - röntgen
+      - sonographie
+      - ultraschall
+      - bildgebung
+    requires_requested_service: true
+    forbidden_auto_finalize: true
+
+  gynaekologie:
+    display_name: Gynaekologie
+    aliases:
+      - gynäkologie
+      - gyn
+      - geburtshilfe
+    allowed_keywords:
+      - schwangerschaft
+      - gyn
+      - geburtshilfe
+      - unterbauchschmerz
+    forbidden_auto_finalize: true
+
+  neurologie:
+    display_name: Neurologie
+    aliases:
+      - neurology
+    allowed_keywords:
+      - neurologie
+      - neurologisch
+      - epilepsie
+      - schlaganfall
+      - tremor
+      - parese
+      - kopfschmerz
+    forbidden_auto_finalize: true
+
+  neurochirurgie:
+    display_name: Neurochirurgie
+    aliases:
+      - neurosurgery
+      - neurochirurgische sprechstunde
+      - konsilanfrage neurochirurgie
+    allowed_keywords:
+      - neurochirurgie
+      - neurochirurgisch
+      - myelopathie
+      - raumforderung
+    forbidden_auto_finalize: true
+
+  infektiologie:
+    display_name: Infektiologie
+    aliases:
+      - infectiology
+      - infektion
+    allowed_keywords:
+      - infektiologie
+      - infektiologisch
+      - infektion
+      - fieber
+      - sepsis
+      - antibiotika
+    forbidden_auto_finalize: true
+
+  reha:
+    display_name: Rehabilitation / Reha
+    aliases:
+      - rehabilitation
+      - physikalische_medizin
+      - physikalische medizin
+    allowed_keywords:
+      - reha
+      - rehabilitation
+      - physiotherapie
+      - ergotherapie
+      - mobilisierung
+    forbidden_auto_finalize: true
+
+  geriatrie:
+    display_name: Geriatrie
+    aliases:
+      - geriatrische kontaktstelle
+      - geriatrische sprechstunde
+      - geriatrische abklaerung
+      - geriatrische abklärung
+    allowed_keywords:
+      - geriatrie
+      - geriatrisch
+      - geriatrische standortbestimmung
+    forbidden_auto_finalize: true
+
+  konsiliardienst:
+    display_name: Konsiliardienst
+    aliases:
+      - konsiliarstelle
+      - mitbeurteilung
+    allowed_keywords:
+      - konsiliardienst
+      - konsiliar
+      - konsil
+    forbidden_auto_finalize: true
+
+  aufnahmezentrum:
+    display_name: Aufnahmezentrum
+    aliases:
+      - aufnahmezentrum administration
+      - patientenaufnahme
+    allowed_keywords:
+      - aufnahmezentrum
+      - aufnahme
+    forbidden_auto_finalize: true
+
+  paediatrie:
+    display_name: Paediatrie
+    aliases:
+      - pädiatrie
+      - paediatrics
+      - pediatrics
+      - kinderklinik
+      - kinder und jugendmedizin
+    allowed_keywords:
+      - paediatrie
+      - pädiatrie
+      - paediatrisch
+      - pädiatrisch
+    forbidden_auto_finalize: true
+
+  pathologie:
+    display_name: Pathologie
+    aliases:
+      - pathology
+      - pathologie-vorbericht
+      - pathologie vorbericht
+    allowed_keywords:
+      - pathologie
+      - pathologisch
+      - gewebeprobe
+      - materialeingang
+    forbidden_auto_finalize: true
+
+  laboradministration:
+    display_name: Laboradministration
+    aliases:
+      - laboratory
+      - laborstelle
+      - laboradministration
+    allowed_keywords:
+      - laborbericht
+      - laborbefund
+      - laboranforderung
+      - laborauftrag
+      - laboradministration
+    forbidden_auto_finalize: true
+
+  labor:
+    display_name: Labor
+    aliases:
+      - labor
+      - laborbericht
+      - laborbefund
+      - lab report
+    allowed_keywords:
+      - laborbericht
+      - laborbefund
+      - laborwerte
+      - haematologie
+      - hämatologie
+      - klinische chemie
+    forbidden_auto_finalize: true
+
+  innere_medizin:
+    display_name: Innere Medizin
+    aliases:
+      - innere medizin
+      - internal medicine
+      - medizinische klinik
+      - innere administration
+      - allgemeine medizin
+      - allgemeinmedizin
+    allowed_keywords:
+      - innere medizin
+      - allgemein internistisch
+      - internistische abklaerung
+      - internistische abklärung
+    forbidden_auto_finalize: true
+
+  chirurgie:
+    display_name: Chirurgie
+    aliases:
+      - surgery
+      - allgemeinchirurgie
+      - chirurgie-administration
+      - chirurgie administration
+      - op-anmeldung
+    allowed_keywords:
+      - chirurgie
+      - chirurgisch
+      - operationsindikation
+      - wundkontrolle
+      - hernie
+    forbidden_auto_finalize: true
+
+  orthopaedie:
+    display_name: Orthopaedie
+    aliases:
+      - orthopädie
+      - orthopedics
+      - orthopaedics
+      - traumatologie
+    allowed_keywords:
+      - orthopaedie
+      - orthopädie
+      - traumatologie
+      - fraktur
+      - gelenk
+      - knie
+      - huefte
+      - hüfte
+      - ruecken
+      - rücken
+    forbidden_auto_finalize: true
+
+  orthopaedie_wirbelsaeule:
+    display_name: Orthopaedie / Wirbelsaeule
+    aliases:
+      - orthopaedie wirbelsaeule
+      - orthopädie wirbelsäule
+      - orthopädie/wirbelsäule
+      - wirbelsaeule
+      - wirbelsäule
+      - spine clinic
+    allowed_keywords:
+      - wirbelsaeule
+      - wirbelsäule
+      - ruecken
+      - rücken
+      - bandscheibe
+      - spinalkanal
+      - skolios
+    forbidden_auto_finalize: true
+
+  pneumologie:
+    display_name: Pneumologie
+    aliases:
+      - pulmonologie
+      - lung clinic
+      - pneumologie sprechstunde
+    allowed_keywords:
+      - pneumologie
+      - pulmonal
+      - lunge
+      - copd
+      - asthma
+      - husten
+      - schlafapnoe
+    forbidden_auto_finalize: true
+
+  gastroenterologie:
+    display_name: Gastroenterologie
+    aliases:
+      - gastro
+    allowed_keywords:
+      - gastroenterologie
+      - gastroskopie
+      - koloskopie
+      - bauchschmerz
+      - darm
+      - leber
+    forbidden_auto_finalize: true
+
+  nephrologie:
+    display_name: Nephrologie
+    aliases:
+      - nephro
+    allowed_keywords:
+      - nephrologie
+      - niere
+      - niereninsuffizienz
+      - dialyse
+    forbidden_auto_finalize: true
+
+  urologie:
+    display_name: Urologie
+    aliases:
+      - urology
+    allowed_keywords:
+      - urologie
+      - prostata
+      - harnwege
+      - niere
+      - blase
+    forbidden_auto_finalize: true
+
+  dermatologie:
+    display_name: Dermatologie
+    aliases:
+      - derma
+      - dermatology
+    allowed_keywords:
+      - dermatologie
+      - haut
+      - exanthem
+      - melanom
+      - dermatitis
+    forbidden_auto_finalize: true
+
+  hno:
+    display_name: HNO
+    aliases:
+      - hals nasen ohren
+      - hals-nasen-ohren
+      - ent
+    allowed_keywords:
+      - hno
+      - hals-nasen-ohren
+      - otologie
+      - sinus
+      - hoersturz
+      - hörsturz
+    forbidden_auto_finalize: true
+
+  augenheilkunde:
+    display_name: Augenheilkunde
+    aliases:
+      - ophthalmologie
+      - ophthalmology
+    allowed_keywords:
+      - augenheilkunde
+      - ophthalmologie
+      - auge
+      - retina
+      - glaukom
+      - visus
+    forbidden_auto_finalize: true
+
+  psychiatrie:
+    display_name: Psychiatrie
+    aliases:
+      - psych
+      - psychiatry
+      - psychiatrische kontaktstelle
+      - konsilanfrage psychiatrie
+    allowed_keywords:
+      - psychiatrie
+      - psychisch
+      - depression
+      - angststoerung
+      - angststörung
+      - krise
+    forbidden_auto_finalize: true
+
+  onkologie:
+    display_name: Onkologie
+    aliases:
+      - oncology
+    allowed_keywords:
+      - onkologie
+      - tumor
+      - karzinom
+      - chemo
+      - malignom
+    forbidden_auto_finalize: true
+
+  endokrinologie:
+    display_name: Endokrinologie
+    aliases:
+      - endo
+    allowed_keywords:
+      - endokrinologie
+      - diabetes
+      - schilddruese
+      - schilddrüse
+      - hormon
+    forbidden_auto_finalize: true
+
+  angiologie:
+    display_name: Angiologie
+    aliases:
+      - gefaessmedizin
+      - gefässmedizin
+    allowed_keywords:
+      - angiologie
+      - gefaess
+      - gefäss
+      - pAVK
+      - thrombose
+    forbidden_auto_finalize: true
+
+  rheumatologie:
+    display_name: Rheumatologie
+    aliases:
+      - rheuma
+    allowed_keywords:
+      - rheumatologie
+      - arthritis
+      - rheuma
+      - autoimmun
+    forbidden_auto_finalize: true
+
+  notfall:
+    display_name: Notfall
+    aliases:
+      - notaufnahme
+      - emergency
+    allowed_keywords:
+      - notfall
+      - notaufnahme
+    forbidden_auto_finalize: true
+
+  wundsprechstunde:
+    display_name: Wundsprechstunde
+    aliases:
+      - wundzentrum
+      - wound clinic
+    allowed_keywords:
+      - wundsprechstunde
+      - wundkontrolle
+      - ulcus
+      - verbandwechsel
+    forbidden_auto_finalize: true
+
+  allgemeinambulanz:
+    display_name: Allgemeinambulanz
+    aliases:
+      - allgemeine ambulanz
+      - allgemeinambulanz
+      - ambulanz
+      - allgemeine sprechstunde
+      - allgemeine zuweisung
+    allowed_keywords:
+      - allgemeinambulanz
+      - allgemeine ambulanz
+      - allgemeine zuweisung
+      - patientenanmeldung
+      - allgemeine abklaerung
+      - allgemeine abklärung
+    forbidden_auto_finalize: true
+
+  anaesthesie_op_disposition:
+    display_name: Anästhesie/OP-Disposition
+    aliases:
+      - anästhesie/op-disposition
+      - anaesthesie op disposition
+      - anästhesie
+      - anaesthesie
+      - op disposition
+      - präoperative abklärung
+      - praeoperative abklaerung
+    allowed_keywords:
+      - anaesthesie
+      - anästhesie
+      - praeoperative
+      - präoperative
+      - op-disposition
+      - operationsplanung
+    forbidden_auto_finalize: true
+
+  endoskopie:
+    display_name: Endoskopie
+    aliases:
+      - endoscopy
+      - gastroskopie
+      - koloskopie
+      - endoskopie anmeldung
+    allowed_keywords:
+      - endoskopie
+      - gastroskopie
+      - koloskopie
+      - ercp
+    forbidden_auto_finalize: true
+
+  ergotherapie:
+    display_name: Ergotherapie
+    aliases:
+      - occupational therapy
+      - ergo
+    allowed_keywords:
+      - ergotherapie
+      - ergo
+      - alltagstraining
+      - hilfsmittel
+    forbidden_auto_finalize: true
+
+  medikationsmanagement:
+    display_name: Medikationsmanagement
+    aliases:
+      - medikationsliste
+      - medikationsmanagement
+      - medication management
+      - medikamentenliste
+    allowed_keywords:
+      - medikationsmanagement
+      - medikationsliste
+      - medikamentenliste
+      - arzneimittel
+      - medikamente
+    forbidden_auto_finalize: true
+
+  notfallnahe_abklaerung:
+    display_name: Notfallnahe Abklärung
+    aliases:
+      - notfallnahe abklärung
+      - notfallnahe abklaerung
+      - same day review
+      - urgent assessment
+      - dringliche abklaerung
+      - dringliche abklärung
+    allowed_keywords:
+      - notfallnahe
+      - dringliche abklaerung
+      - dringliche abklärung
+      - same day
+      - sturz
+      - hypoxie
+      - unklare blutung
+    forbidden_auto_finalize: true
+
+  palliativmedizin:
+    display_name: Palliativmedizin
+    aliases:
+      - palliative care
+      - palliativ
+      - palliativsprechstunde
+    allowed_keywords:
+      - palliativmedizin
+      - palliativ
+      - symptomkontrolle
+      - advance care planning
+    forbidden_auto_finalize: true
+
+  patientenadministration:
+    display_name: Patientenadministration
+    aliases:
+      - patientenadministration
+      - patientenadministration und empfang
+      - patientenaufnahme administrativ
+      - administrative dokumente
+    allowed_keywords:
+      - patientenadministration
+      - administratives dokument
+      - versicherungskarte
+      - adressdaten
+      - personalien
+    forbidden_auto_finalize: true
+
+  pflegekoordination:
+    display_name: Pflegekoordination
+    aliases:
+      - pflegekoordination
+      - pflegeübertritt
+      - pflegeuebertritt
+      - nursing transfer
+      - pflege
+    allowed_keywords:
+      - pflegekoordination
+      - pflegeuebertritt
+      - pflegeübertritt
+      - pflegebedarf
+      - uebertritt
+      - übertritt
+    forbidden_auto_finalize: true
+
+  physiotherapie:
+    display_name: Physiotherapie
+    aliases:
+      - physio
+      - physical therapy
+      - physiotherapie anmeldung
+    allowed_keywords:
+      - physiotherapie
+      - physio
+      - mobilisierung
+      - gangschule
+      - training
+    forbidden_auto_finalize: true
+
+  schmerzsprechstunde:
+    display_name: Schmerzsprechstunde
+    aliases:
+      - schmerzklinik
+      - pain clinic
+      - schmerzmedizin
+    allowed_keywords:
+      - schmerzsprechstunde
+      - schmerzklinik
+      - schmerztherapie
+      - chronische schmerzen
+    forbidden_auto_finalize: true
+
+  sozialdienst:
+    display_name: Sozialdienst
+    aliases:
+      - social service
+      - sozialberatung
+      - sozialdienst zuweisung
+    allowed_keywords:
+      - sozialdienst
+      - sozialberatung
+      - kostengutsprache
+      - austrittsplanung
+      - unterstuetzung
+      - unterstützung
+    forbidden_auto_finalize: true
+
+  versicherungskoordination:
+    display_name: Versicherungskoordination
+    aliases:
+      - versicherungskoordination
+      - insurance coordination
+      - kostengutsprache
+      - versicherungsnummer
+      - krankenkasse
+    allowed_keywords:
+      - versicherungskoordination
+      - versicherung
+      - krankenkasse
+      - kostengutsprache
+      - versicherungsnummer
+    forbidden_auto_finalize: true

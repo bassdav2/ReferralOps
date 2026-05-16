@@ -1,0 +1,37 @@
+global_required:
+  - patient.name
+  - patient.birth_date
+  - referring_party.physician_name
+  - clinical_context_for_admin_routing.reason_for_referral
+
+rules_by_department:
+  kardiologie:
+    required:
+      - patient.phone
+      - clinical_context_for_admin_routing.reason_for_referral
+    recommended_attachments:
+      - medication_list
+      - lab
+      - prior_reports
+    blocking_if_missing:
+      - patient.birth_date
+
+  radiologie:
+    required:
+      - clinical_context_for_admin_routing.requested_service
+      - patient.birth_date
+    recommended_attachments:
+      - prior_reports
+      - imaging
+    blocking_if_missing:
+      - clinical_context_for_admin_routing.requested_service
+
+  gynaekologie:
+    required:
+      - patient.birth_date
+      - referring_party.physician_name
+    recommended_attachments:
+      - prior_reports
+    blocking_if_missing:
+      - patient.birth_date
+

@@ -1,0 +1,23 @@
+{
+  "dataset": "demos/referral_batch_large/pdf_adjudicated_labels.csv",
+  "cases": 500,
+  "reviewed_rows": 474,
+  "uncertain_rows": 26,
+  "routing_top1_correct": 427,
+  "routing_top1_accuracy": 0.854,
+  "routing_top3_correct": 459,
+  "routing_top3_accuracy": 0.918,
+  "routing_top1_correct_excluding_uncertain": 416,
+  "routing_top1_accuracy_excluding_uncertain": 0.878,
+  "schema_valid_rate": 1.0,
+  "model_response_invalid_count": 0,
+  "null_unknown_route_rate": 0.0,
+  "safe_fallback_rate": 0.0,
+  "model_id": "google/gemma-4-31B-it",
+  "serving_mode": "local OpenAI-compatible /v1/chat/completions",
+  "hardware": "H100 VPS",
+  "approximate_runtime": "about 3 hours",
+  "label_basis": "pdf_content_adjudicated",
+  "external_ai_calls": "disabled",
+  "data": "synthetic only"
+}

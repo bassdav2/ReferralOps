@@ -1,0 +1,36 @@
+sources:
+  it_knowledge_base:
+    adapter: filesystem
+    path: demos/guideline_docs/it_access.md
+    access_groups: [it_users, all_staff]
+    owner_department: IT
+    default_status: active
+
+  hygiene_policies:
+    adapter: filesystem
+    path: demos/guideline_docs/hygiene_nadelstich.md
+    access_groups: [all_staff]
+    owner_department: Hygiene
+    default_status: active
+    escalation_contact: hygiene@demo.local
+
+  hr_onboarding:
+    adapter: filesystem
+    path: demos/guideline_docs/onboarding_checklist.md
+    access_groups: [hr, all_staff]
+    owner_department: HR
+    default_status: active
+
+  dms_writeback_policy:
+    adapter: filesystem
+    path: demos/guideline_docs/dms_writeback_policy.md
+    access_groups: [admin, referral_reviewers]
+    owner_department: Records Management
+    default_status: active
+
+  referral_review_checklist:
+    adapter: filesystem
+    path: demos/guideline_docs/referral_review_checklist.md
+    access_groups: [admin, referral_reviewers]
+    owner_department: Zuweisungsstelle
+    default_status: active

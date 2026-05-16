@@ -1,0 +1,21 @@
+dataset: lean_referrals_demo_v1
+cases:
+  - id: kardiologie_complete_referral
+    path: demos/referral_inbox_samples/001_kardiologie_complete_referral.pdf
+    user: sekretariat_kardiologie
+    access_groups: [referral_reviewers]
+    expected:
+      routing_target: kardiologie
+      blocking_missing_fields: []
+      recommended_missing_fields: []
+      missing_fields: []
+
+  - id: innere_medizin_missing_phone_scan
+    path: demos/referral_inbox_samples/002_innere_medizin_missing_phone_scan.pdf
+    user: sekretariat_kardiologie
+    access_groups: [referral_reviewers]
+    expected:
+      routing_target: innere_medizin
+      blocking_missing_fields: []
+      recommended_missing_fields: []
+      missing_fields: []
