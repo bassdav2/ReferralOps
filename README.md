@@ -30,6 +30,44 @@ On Linux, run the same launcher flow from a terminal:
 
 You still need a local OpenAI-compatible model server for model-backed referral analysis, for example vLLM, MLX LM, llama.cpp server, or LM Studio.
 
+### Manual terminal fallback
+
+If you do not want to double-click the launcher, run the same setup flow from a terminal at the repo root:
+
+```bash
+chmod +x ./scripts/start_judge_demo.sh
+./scripts/start_judge_demo.sh
+```
+
+If the launcher itself fails and you want to start everything manually, install the system dependencies first, then run:
+
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+pip install -e ".[dev]"
+npm --prefix frontend ci
+[ -f .env ] || cp .env.local-model.example .env
+python scripts/ingest_guidelines.py
+```
+
+Start the backend in one terminal:
+
+```bash
+NO_EXTERNAL_AI_CALLS=true \
+BACKEND_CORS_ORIGINS=http://127.0.0.1:5173,http://localhost:5173 \
+.venv/bin/uvicorn backend.app.main:app --host 0.0.0.0 --port 8000 --reload --reload-dir backend --reload-dir configs
+```
+
+Start the frontend in another terminal:
+
+```bash
+VITE_API_BASE_URL=http://127.0.0.1:8000 \
+npm --prefix frontend run dev -- --host 0.0.0.0 --port 5173 --strictPort
+```
+
+Then open `http://127.0.0.1:5173`. If port `5173` is already in use, choose another frontend port, for example `5174`, and update both the frontend command and `BACKEND_CORS_ORIGINS` to use that port.
+
 ### Manual system install
 
 Use these only if you want to install prerequisites yourself or your launcher cannot use the OS package manager.
