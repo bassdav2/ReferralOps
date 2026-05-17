@@ -30,7 +30,7 @@ On Linux, run the same launcher flow from a terminal:
 
 You still need a local OpenAI-compatible model server for model-backed referral analysis, for example vLLM, MLX LM, llama.cpp server, or LM Studio.
 
-### Manual terminal fallback
+### Manual terminal install
 
 If you do not want to double-click the launcher, run the same setup flow from a terminal at the repo root:
 
