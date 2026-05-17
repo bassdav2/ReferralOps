@@ -4,16 +4,21 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT_DIR"
 
-BACKEND_URL="${BACKEND_URL:-http://127.0.0.1:8000}"
-FRONTEND_URL="${FRONTEND_URL:-http://127.0.0.1:5173}"
+FRONTEND_PORT_CONFIGURED="${FRONTEND_PORT+x}"
+FRONTEND_URL_CONFIGURED="${FRONTEND_URL+x}"
 BACKEND_PORT="${BACKEND_PORT:-8000}"
 FRONTEND_PORT="${FRONTEND_PORT:-5173}"
+BACKEND_URL="${BACKEND_URL:-http://127.0.0.1:$BACKEND_PORT}"
+FRONTEND_URL="${FRONTEND_URL:-http://127.0.0.1:$FRONTEND_PORT}"
 LOG_DIR="${LOG_DIR:-$ROOT_DIR/tmp/judge-demo}"
 OPEN_BROWSER="${OPEN_BROWSER:-true}"
 export NO_EXTERNAL_AI_CALLS=true
-export BACKEND_CORS_ORIGINS="${BACKEND_CORS_ORIGINS:-$FRONTEND_URL,http://localhost:$FRONTEND_PORT,http://127.0.0.1:$FRONTEND_PORT}"
 
 mkdir -p "$LOG_DIR"
+
+BACKEND_HEALTH="$BACKEND_URL/api/health"
+BACKEND_LOG="$LOG_DIR/backend.log"
+FRONTEND_LOG="$LOG_DIR/frontend.log"
 
 fail() {
   echo "ERROR: $*" >&2
@@ -22,6 +27,13 @@ fail() {
 
 command_exists() {
   command -v "$1" >/dev/null 2>&1
+}
+
+is_truthy() {
+  case "${1:-}" in
+    1|true|TRUE|yes|YES|on|ON) return 0 ;;
+    *) return 1 ;;
+  esac
 }
 
 prompt_yes_no() {
@@ -255,6 +267,94 @@ port_in_use() {
   fi
 }
 
+listener_pids() {
+  if command -v lsof >/dev/null 2>&1; then
+    lsof -tiTCP:"$1" -sTCP:LISTEN 2>/dev/null || true
+  fi
+}
+
+port_owned_by_repo() {
+  local port="$1"
+  local pid
+  local command_line
+
+  while IFS= read -r pid; do
+    [ -n "$pid" ] || continue
+    command_line="$(ps -p "$pid" -o command= 2>/dev/null || true)"
+    if printf '%s\n' "$command_line" | grep -F "$ROOT_DIR" >/dev/null 2>&1; then
+      return 0
+    fi
+  done < <(listener_pids "$port")
+
+  return 1
+}
+
+listener_summary() {
+  local port="$1"
+
+  if command -v lsof >/dev/null 2>&1; then
+    lsof -nP -iTCP:"$port" -sTCP:LISTEN 2>/dev/null | sed '1d' || true
+  fi
+}
+
+fail_port_conflict() {
+  local label="$1"
+  local port="$2"
+  local url="$3"
+  local env_name="$4"
+
+  listener_summary "$port"
+  fail "$label port $port is already in use by another process, so the launcher cannot safely reuse $url. Stop that process or rerun with $env_name set to a free port."
+}
+
+find_available_port() {
+  local start_port="$1"
+  local end_port="$2"
+  local port
+
+  for port in $(seq "$start_port" "$end_port"); do
+    if ! port_in_use "$port"; then
+      printf '%s\n' "$port"
+      return 0
+    fi
+  done
+
+  return 1
+}
+
+resolve_frontend_port() {
+  local fallback_port
+
+  if ! port_in_use "$FRONTEND_PORT" || port_owned_by_repo "$FRONTEND_PORT"; then
+    return 0
+  fi
+
+  if [ -n "$FRONTEND_PORT_CONFIGURED" ] || [ -n "$FRONTEND_URL_CONFIGURED" ]; then
+    fail_port_conflict "Frontend" "$FRONTEND_PORT" "$FRONTEND_URL" "FRONTEND_PORT"
+  fi
+
+  fallback_port="$(find_available_port "$((FRONTEND_PORT + 1))" "$((FRONTEND_PORT + 50))")" \
+    || fail_port_conflict "Frontend" "$FRONTEND_PORT" "$FRONTEND_URL" "FRONTEND_PORT"
+
+  echo "Frontend port $FRONTEND_PORT is already in use by another process; using $fallback_port instead."
+  FRONTEND_PORT="$fallback_port"
+  FRONTEND_URL="http://127.0.0.1:$FRONTEND_PORT"
+}
+
+configure_cors_origins() {
+  export BACKEND_CORS_ORIGINS="${BACKEND_CORS_ORIGINS:-$FRONTEND_URL,http://localhost:$FRONTEND_PORT,http://127.0.0.1:$FRONTEND_PORT}"
+}
+
+preflight_port_conflicts() {
+  if port_in_use "$BACKEND_PORT" && ! port_owned_by_repo "$BACKEND_PORT"; then
+    fail_port_conflict "Backend" "$BACKEND_PORT" "$BACKEND_HEALTH" "BACKEND_PORT"
+  fi
+
+  if port_in_use "$FRONTEND_PORT" && ! port_owned_by_repo "$FRONTEND_PORT"; then
+    fail_port_conflict "Frontend" "$FRONTEND_PORT" "$FRONTEND_URL" "FRONTEND_PORT"
+  fi
+}
+
 wait_for_url() {
   local label="$1"
   local url="$2"
@@ -274,19 +374,32 @@ wait_for_url() {
 }
 
 open_dashboard() {
-  if [ "$OPEN_BROWSER" != "true" ]; then
+  if ! is_truthy "$OPEN_BROWSER"; then
     return 0
   fi
-  if command -v open >/dev/null 2>&1; then
-    open "$FRONTEND_URL"
+
+  echo "Opening dashboard in your browser: $FRONTEND_URL"
+
+  if [ "$(uname -s)" = "Darwin" ]; then
+    if /usr/bin/open "$FRONTEND_URL" >/dev/null 2>&1; then
+      return 0
+    fi
+    if command_exists osascript && osascript -e "open location \"$FRONTEND_URL\"" >/dev/null 2>&1; then
+      return 0
+    fi
   elif command -v xdg-open >/dev/null 2>&1; then
-    xdg-open "$FRONTEND_URL" >/dev/null 2>&1 || true
-  else
-    echo "Open the dashboard manually: $FRONTEND_URL"
+    if xdg-open "$FRONTEND_URL" >/dev/null 2>&1; then
+      return 0
+    fi
   fi
+
+  echo "Could not open the dashboard automatically. Open it manually: $FRONTEND_URL"
 }
 
 configure_tesseract_environment
+resolve_frontend_port
+configure_cors_origins
+preflight_port_conflicts
 install_missing_system_dependencies
 configure_tesseract_environment
 
@@ -315,28 +428,32 @@ fi
 echo "Preparing synthetic guideline demo data..."
 "$VENV_PY" scripts/ingest_guidelines.py
 
-BACKEND_HEALTH="$BACKEND_URL/api/health"
-BACKEND_LOG="$LOG_DIR/backend.log"
-FRONTEND_LOG="$LOG_DIR/frontend.log"
-
-if url_ok "$BACKEND_HEALTH"; then
+if url_ok "$BACKEND_HEALTH" && port_owned_by_repo "$BACKEND_PORT"; then
   echo "Backend already running: $BACKEND_HEALTH"
 elif port_in_use "$BACKEND_PORT"; then
-  fail "Port $BACKEND_PORT is in use, but $BACKEND_HEALTH is not healthy."
+  if port_owned_by_repo "$BACKEND_PORT"; then
+    fail "Backend port $BACKEND_PORT is owned by this repo, but $BACKEND_HEALTH is not healthy. Stop the existing backend process and rerun this launcher."
+  else
+    fail_port_conflict "Backend" "$BACKEND_PORT" "$BACKEND_HEALTH" "BACKEND_PORT"
+  fi
 else
   echo "Starting backend on $BACKEND_URL..."
-  nohup "$VENV_UVICORN" backend.app.main:app --host 0.0.0.0 --port "$BACKEND_PORT" --reload >"$BACKEND_LOG" 2>&1 &
+  nohup "$VENV_UVICORN" backend.app.main:app --host 0.0.0.0 --port "$BACKEND_PORT" --reload --reload-dir "$ROOT_DIR/backend" --reload-dir "$ROOT_DIR/configs" >"$BACKEND_LOG" 2>&1 &
   echo "$!" >"$LOG_DIR/backend.pid"
   wait_for_url "Backend" "$BACKEND_HEALTH" "$BACKEND_LOG"
 fi
 
-if url_ok "$FRONTEND_URL"; then
+if url_ok "$FRONTEND_URL" && port_owned_by_repo "$FRONTEND_PORT"; then
   echo "Frontend already running: $FRONTEND_URL"
 elif port_in_use "$FRONTEND_PORT"; then
-  fail "Port $FRONTEND_PORT is in use, but $FRONTEND_URL is not reachable."
+  if port_owned_by_repo "$FRONTEND_PORT"; then
+    fail "Frontend port $FRONTEND_PORT is owned by this repo, but $FRONTEND_URL is not reachable. Stop the existing frontend process and rerun this launcher."
+  else
+    fail_port_conflict "Frontend" "$FRONTEND_PORT" "$FRONTEND_URL" "FRONTEND_PORT"
+  fi
 else
   echo "Starting frontend on $FRONTEND_URL..."
-  nohup npm --prefix frontend run dev -- --host 0.0.0.0 >"$FRONTEND_LOG" 2>&1 &
+  nohup env VITE_API_BASE_URL="$BACKEND_URL" npm --prefix frontend run dev -- --host 0.0.0.0 --port "$FRONTEND_PORT" --strictPort >"$FRONTEND_LOG" 2>&1 &
   echo "$!" >"$LOG_DIR/frontend.pid"
   wait_for_url "Frontend" "$FRONTEND_URL" "$FRONTEND_LOG"
 fi
